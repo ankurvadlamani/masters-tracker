@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masters Tracker</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f5d8a'/%3E%3Cpath d='M6 13l10-5 10 5-10 5z' fill='white'/%3E%3Cpath d='M10 16v5c3 2 9 2 12 0v-5' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --surface2:#f0f2f5; --border:#e1e4ea; --text:#1b2330; --muted:#5f6b7c;
+  --accent:#2f5d8a; --accent-soft:#e3ecf5; --danger:#b3261e; --danger-soft:#fbe7e6; --warn:#9a6700; --warn-soft:#fdf1d7;
+  --ok:#1e7a46; --ok-soft:#e1f3e8; --info:#5b4bb7; --info-soft:#ebe8fa; --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
+  --radius:12px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1318; --surface:#171c23; --surface2:#1f262f; --border:#2b333e; --text:#e6eaf0; --muted:#98a3b3;
+  --accent:#7fb0e0; --accent-soft:#1c2c3d; --danger:#f2837a; --danger-soft:#3a1f1d; --warn:#e6b450; --warn-soft:#352a14;
+  --ok:#6cc995; --ok-soft:#16301f; --info:#b1a6f2; --info-soft:#262040; --shadow:0 1px 2px rgba(0,0,0,.4);
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1318; --surface:#171c23; --surface2:#1f262f; --border:#2b333e; --text:#e6eaf0; --muted:#98a3b3;
+  --accent:#7fb0e0; --accent-soft:#1c2c3d; --danger:#f2837a; --danger-soft:#3a1f1d; --warn:#e6b450; --warn-soft:#352a14;
+  --ok:#6cc995; --ok-soft:#16301f; --info:#b1a6f2; --info-soft:#262040; --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+header.top .wrap{display:flex;align-items:center;gap:12px;height:60px}
+.brand{font-weight:700;font-size:17px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand .logo{width:28px;height:28px;border-radius:7px;background:var(--accent);display:grid;place-items:center;color:var(--surface)}
+.spacer{flex:1}
+.btn{border:1px solid var(--border);background:var(--surface);padding:7px 12px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:600}
+.btn.danger{color:var(--danger)}
+.btn.ghost{background:transparent;border-color:transparent}
+.btn.sm{padding:4px 9px;font-size:13px}
+.btn:disabled{opacity:.5;cursor:default}
+.save-state{font-size:12.5px;color:var(--muted)}
+.save-state.err{color:var(--danger)}
+.lockpill{font-size:12.5px;padding:3px 9px;border-radius:99px;background:var(--surface2);color:var(--muted)}
+.lockpill.on{background:var(--ok-soft);color:var(--ok)}
+main{padding:20px 0 60px}
+.grid2{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+.grid2>*{min-width:0}
+.profile dd{overflow-wrap:anywhere}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.panel h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.stat .v{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.stat .l{color:var(--muted);font-size:12.5px}
+.upcoming{list-style:none;margin:0;padding:0}
+.upcoming li{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--border);cursor:pointer}
+.upcoming li:first-child{border-top:0}
+.upcoming .d{min-width:74px;font-variant-numeric:tabular-nums;font-weight:600}
+.upcoming .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.profile dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13.5px}
+.profile dt{color:var(--muted)}
+.profile dd{margin:0}
+.rem{list-style:none;margin:10px 0 0;padding:0}
+.rem li{display:flex;gap:8px;align-items:flex-start;padding:5px 0;font-size:13.5px}
+.rem li.done span{text-decoration:line-through;color:var(--muted)}
+.rem input[type=checkbox]{margin-top:3px}
+.rem .x{margin-left:auto;opacity:.5}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:22px 0 12px}
+.toolbar input[type=search],.toolbar select{border:1px solid var(--border);background:var(--surface);border-radius:9px;padding:7px 10px;min-width:0}
+.toolbar input[type=search]{flex:1 1 220px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--border);background:var(--surface);border-radius:99px;padding:4px 11px;cursor:pointer;font-size:13px}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:9px;overflow:hidden}
+.seg button{border:0;background:var(--surface);padding:7px 11px;cursor:pointer}
+.seg button.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+@media (max-width:400px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.card h3{margin:0;font-size:15px;line-height:1.35}
+.card .uni{color:var(--muted);font-size:13px}
+.cc{font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 6px;border-radius:5px;background:var(--surface2);color:var(--muted)}
+.pill{font-size:12px;padding:2px 9px;border-radius:99px;font-weight:500;white-space:nowrap}
+.p-neutral{background:var(--surface2);color:var(--muted)}
+.p-ok{background:var(--ok-soft);color:var(--ok)}
+.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-danger{background:var(--danger-soft);color:var(--danger)}
+.p-info{background:var(--info-soft);color:var(--info)}
+.p-accent{background:var(--accent-soft);color:var(--accent)}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:13px}
+.meta span:nth-child(odd){color:var(--muted)}
+.bar{height:6px;background:var(--surface2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.card .foot{display:flex;gap:8px;align-items:center;margin-top:auto;padding-top:4px}
+.card .foot a{font-size:13px}
+.verify{font-size:11.5px;color:var(--warn)}
+table.tbl{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;font-size:13.5px}
+.tblwrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow)}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.tbl th{background:var(--surface2);font-weight:600;font-size:12.5px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tbl tr:hover td{background:var(--surface2);cursor:pointer}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+/* drawer & modal */
+.scrim{position:fixed;inset:0;background:rgba(10,14,20,.45);z-index:40;display:none}
+.scrim.open{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(620px,100%);background:var(--surface);z-index:50;transform:translateX(100%);transition:transform .2s ease;display:flex;flex-direction:column;border-left:1px solid var(--border)}
+.drawer.open{transform:none}
+.drawer .hd{padding:16px 18px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start}
+.drawer .hd h2{margin:0;font-size:17px}
+.drawer .bd{padding:16px 18px;overflow:auto;flex:1}
+.drawer .ft{padding:12px 18px;border-top:1px solid var(--border);display:flex;gap:8px}
+.sec{margin-bottom:18px}
+.sec h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sec p{margin:0;white-space:pre-wrap}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:6px 12px}
+@media (max-width:500px){.kv{grid-template-columns:1fr}}
+.kv .k{color:var(--muted)}
+.docs{list-style:none;padding:0;margin:0}
+.docs li{display:flex;gap:8px;align-items:center;padding:4px 0}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.form .full{grid-column:1/-1}
+@media (max-width:520px){.form{grid-template-columns:1fr}}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted)}
+.form input,.form select,.form textarea,.modal input,.modal textarea{border:1px solid var(--border);background:var(--surface);border-radius:8px;padding:8px 10px;color:var(--text);font-size:14px;width:100%}
+.form textarea{min-height:70px;resize:vertical}
+.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100% - 32px));max-height:calc(100% - 32px);overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:14px;z-index:60;padding:20px;display:none;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.modal.open{display:block}
+.modal h3{margin:0 0 6px}
+.modal p{color:var(--muted);margin:0 0 12px;font-size:13.5px}
+.modal .row{display:flex;gap:8px;margin-top:12px;justify-content:flex-end}
+.modal .err{color:var(--danger);font-size:13px;min-height:18px;margin-top:6px}
+.modal label{display:block;font-size:12.5px;color:var(--muted);margin:10px 0 4px}
+.check{display:flex;gap:8px;align-items:center;font-size:13.5px;margin-top:10px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:9px 14px;border-radius:9px;z-index:70;font-size:13.5px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+.editonly{display:none}
+body.unlocked .editonly{display:revert}
+body.unlocked .viewonly{display:none}
+.hide-sm{}
+@media (max-width:640px){.hide-sm{display:none}}
+footer{color:var(--muted);font-size:12.5px;text-align:center;padding:20px 0 40px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><div class="logo"><svg width="18" height="18" viewBox="0 0 32 32"><path d="M3 12l13-6 13 6-13 6z" fill="currentColor"/><path d="M8 15v6c4 3 12 3 16 0v-6" stroke="currentColor" stroke-width="2.4" fill="none"/></svg></div><span>Masters Tracker</span></div>
+  <div class="spacer"></div>
+  <span id="saveState" class="save-state"></span>
+  <span id="lockPill" class="lockpill hide-sm">View only</span>
+  <button class="btn editonly sm" id="settingsBtn" title="Settings">Settings</button>
+  <button class="btn" id="lockBtn">Unlock</button>
+</div></header>
+
+<main class="wrap">
+  <div class="stats" id="stats"></div>
+  <div class="grid2">
+    <section class="panel"><h2>Upcoming deadlines</h2><ul class="upcoming" id="upcoming"></ul></section>
+    <section class="panel profile">
+      <h2>Profile &amp; reminders</h2>
+      <dl id="profile"></dl>
+      <ul class="rem" id="reminders"></ul>
+      <form id="remForm" class="editonly" style="margin-top:8px;display:none"><input id="remInput" placeholder="Add a reminder and press Enter" style="width:100%;border:1px solid var(--border);background:var(--surface);border-radius:8px;padding:7px 10px"></form>
+    </section>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Search university, program, city, notes…">
+    <div class="chips" id="countryChips"></div>
+    <select id="statusFilter"><option value="">All statuses</option></select>
+    <select id="sortBy">
+      <option value="deadline">Sort: deadline</option>
+      <option value="priority">Sort: priority</option>
+      <option value="country">Sort: country</option>
+      <option value="status">Sort: status</option>
+      <option value="uni">Sort: university</option>
+    </select>
+    <div class="seg"><button id="vCards" class="on">Cards</button><button id="vTable">Table</button></div>
+    <button class="btn primary editonly" id="addBtn">+ Add program</button>
+  </div>
+  <div id="list"></div>
+</main>
+<footer>
+  <span id="updated"></span> ·
+  <a href="#" id="exportBtn">Export JSON</a> ·
+  <a href="#" id="importBtn" class="editonly">Import JSON</a>
+  <input type="file" id="importFile" accept="application/json" hidden>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="hd"><div style="flex:1;min-width:0"><div id="dUni" class="uni" style="color:var(--muted);font-size:13px"></div><h2 id="dTitle"></h2></div><button class="btn ghost" id="dClose" aria-label="Close">✕</button></div>
+  <div class="bd" id="dBody"></div>
+  <div class="ft" id="dFoot"></div>
+</aside>
+
+<div class="modal" id="unlockModal" role="dialog" aria-modal="true">
+  <h3 id="uTitle">Unlock editing</h3>
+  <p id="uDesc">Enter your password to edit. Changes are saved to GitHub and show up on every device.</p>
+  <div id="setupFields" style="display:none">
+    <label>GitHub fine-grained token (Contents: read &amp; write on this repo only)</label>
+    <input id="tokenInput" type="password" autocomplete="off" placeholder="github_pat_…">
+    <label>Repository</label>
+    <input id="repoInput" placeholder="username/repo">
+  </div>
+  <label id="pwLabel">Password</label>
+  <input id="pwInput" type="password" inputmode="numeric" autocomplete="current-password">
+  <label class="check"><input type="checkbox" id="rememberChk" checked> Remember on this device</label>
+  <div class="err" id="uErr"></div>
+  <div class="row"><button class="btn" id="uCancel">Cancel</button><button class="btn primary" id="uGo">Unlock</button></div>
+</div>
+
+<div class="modal" id="settingsModal" role="dialog" aria-modal="true">
+  <h3>Settings</h3>
+  <p>Repository: <b id="sRepo"></b></p>
+  <label>Add another password (both will work)</label>
+  <input id="sNewPw" type="password" placeholder="New password">
+  <div class="row" style="justify-content:flex-start"><button class="btn sm" id="sAddPw">Add password</button><button class="btn sm" id="sReplacePw" title="Remove all other passwords and keep only this one">Replace all with this</button></div>
+  <label>Replace GitHub token (e.g. after it expires)</label>
+  <input id="sNewToken" type="password" placeholder="github_pat_…">
+  <div class="row" style="justify-content:flex-start"><button class="btn sm" id="sSetToken">Update token</button></div>
+  <label class="check"><input type="checkbox" id="sDark"> Force dark theme</label>
+  <div class="err" id="sErr"></div>
+  <div class="row"><button class="btn" id="sClose">Close</button></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+"use strict";
+/* ---------- constants ---------- */
+const STATUSES = ["Researching","Preparing docs","Applied","Interview/Test","Admitted","Rejected","Withdrawn"];
+const STATUS_CLS = {"Researching":"p-neutral","Preparing docs":"p-info","Applied":"p-accent","Interview/Test":"p-warn","Admitted":"p-ok","Rejected":"p-danger","Withdrawn":"p-neutral"};
+const FITS = ["Good fit","Reach","Check prereqs","Below cutoff"];
+const FIT_CLS = {"Good fit":"p-ok","Reach":"p-warn","Check prereqs":"p-warn","Below cutoff":"p-danger"};
+const PRIOS = ["High","Medium","Low"];
+const COUNTRIES = {DE:"Germany",SE:"Sweden",NL:"Netherlands",FR:"France",NO:"Norway",EU:"Other / multi"};
+const ITER = 600000;
+const LS = { token:"mt_token", repo:"mt_repo", theme:"mt_theme", view:"mt_view" };
+
+/* ---------- state ---------- */
+let data = null, sha = null, token = null, repo = null;
+let pendingOps = [], saving = false, saveTimer = null;
+let ui = { q:"", country:"", status:"", sort:"deadline", view:"cards", openId:null, editing:false };
+
+/* ---------- utils ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => { try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : ""; } catch { return ""; } };
+const store = { get(k){ try { return localStorage.getItem(k); } catch { return null; } }, set(k,v){ try { localStorage.setItem(k,v); } catch {} }, del(k){ try { localStorage.removeItem(k); sessionStorage.removeItem(k); } catch {} },
+  sget(k){ try { return sessionStorage.getItem(k); } catch { return null; } }, sset(k,v){ try { sessionStorage.setItem(k,v); } catch {} } };
+const uid = () => Math.random().toString(36).slice(2,9);
+const today = () => { const d = new Date(); d.setHours(0,0,0,0); return d; };
+function daysLeft(iso){ if(!iso) return null; const d = new Date(iso+"T00:00:00"); if(isNaN(d)) return null; return Math.round((d - today())/86400000); }
+function fmtDate(iso){ if(!iso) return "—"; const d = new Date(iso+"T00:00:00"); if(isNaN(d)) return iso; return d.toLocaleDateString(undefined,{day:"numeric",month:"short",year:"numeric"}); }
+function dueBadge(p){
+  const n = daysLeft(p.deadline);
+  if (n === null) return `<span class="pill p-neutral">No date yet</span>`;
+  if (["Applied","Interview/Test","Admitted","Rejected","Withdrawn"].includes(p.status)) return `<span class="pill p-neutral">${fmtDate(p.deadline)}</span>`;
+  if (n < 0) return `<span class="pill p-neutral">Closed ${fmtDate(p.deadline)}</span>`;
+  const cls = n <= 14 ? "p-danger" : n <= 45 ? "p-warn" : "p-ok";
+  return `<span class="pill ${cls}">${n === 0 ? "Due today" : n + " days left"}</span>`;
+}
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(()=>t.classList.remove("show"), 2600); }
+const b64enc = str => { const bytes = new TextEncoder().encode(str); let bin = ""; for (let i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i,i+0x8000)); return btoa(bin); };
+const b64dec = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g,"")), c => c.charCodeAt(0)));
+const buf2b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+const b642buf = b64 => Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+
+/* ---------- repo detection ---------- */
+function detectRepo(){
+  const qp = new URLSearchParams(location.search).get("repo");
+  if (qp && /^[\w.-]+\/[\w.-]+$/.test(qp)) return qp;
+  const saved = store.get(LS.repo); if (saved) return saved;
+  const h = location.hostname;
+  if (h.endsWith(".github.io")) {
+    const user = h.replace(".github.io","");
+    const seg = location.pathname.split("/").filter(Boolean)[0];
+    return seg && !seg.includes(".") ? `${user}/${seg}` : `${user}/${h}`;
+  }
+  return null;
+}
+
+/* ---------- GitHub API ---------- */
+async function gh(path, opts = {}, tok = token){
+  const headers = { "Accept":"application/vnd.github+json" };
+  if (tok) headers.Authorization = "Bearer " + tok;
+  if (opts.body) headers["Content-Type"] = "application/json";
+  const r = await fetch("https://api.github.com" + path, { ...opts, headers, cache:"no-store" });
+  return r;
+}
+async function readFile(name){
+  if (repo) {
+    try {
+      const r = await gh(`/repos/${repo}/contents/${name}`);
+      if (r.status === 404) return { missing:true };
+      if (r.ok) { const j = await r.json(); return { text: b64dec(j.content), sha: j.sha }; }
+    } catch(e) { /* fall through to relative */ }
+  }
+  try {
+    const r = await fetch(name + "?t=" + Date.now(), { cache:"no-store" });
+    if (r.ok) return { text: await r.text(), sha:null, relative:true };
+    if (r.status === 404) return { missing:true };
+  } catch(e) {}
+  return { error:true };
+}
+async function writeFile(name, text, fileSha, message, tok = token){
+  const body = { message, content: b64enc(text) };
+  if (fileSha) body.sha = fileSha;
+  const r = await gh(`/repos/${repo}/contents/${name}`, { method:"PUT", body: JSON.stringify(body) }, tok);
+  if (!r.ok) { const e = new Error("GitHub " + r.status); e.status = r.status; try { e.detail = (await r.json()).message; } catch {} throw e; }
+  const j = await r.json(); return j.content.sha;
+}
+
+/* ---------- crypto ---------- */
+async function deriveKey(pw, salt, iter){
+  const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({ name:"PBKDF2", salt, iterations: iter, hash:"SHA-256" }, base, { name:"AES-GCM", length:256 }, false, ["encrypt","decrypt"]);
+}
+async function encryptToken(tok, pw){
+  const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+  const key = await deriveKey(pw, salt, ITER);
+  const ct = await crypto.subtle.encrypt({ name:"AES-GCM", iv }, key, new TextEncoder().encode(tok));
+  return { salt: buf2b64(salt), iv: buf2b64(iv), iter: ITER, ct: buf2b64(ct) };
+}
+async function decryptEntry(e, pw){
+  const key = await deriveKey(pw, b642buf(e.salt), e.iter);
+  const pt = await crypto.subtle.decrypt({ name:"AES-GCM", iv: b642buf(e.iv) }, key, b642buf(e.ct));
+  return new TextDecoder().decode(pt);
+}
+
+/* ---------- load ---------- */
+async function load(){
+  repo = detectRepo();
+  token = store.get(LS.token) || store.sget(LS.token);
+  const f = await readFile("data.json");
+  if (f.text) { try { data = JSON.parse(f.text); sha = f.sha; } catch { data = null; } }
+  if (!data) { data = { version:1, profile:{}, reminders:[], programs:[] }; if (f.error) toast("Couldn't load data.json"); }
+  normalize(data);
+  setLocked(!token);
+  render();
+}
+function normalize(d){
+  d.programs ||= []; d.reminders ||= []; d.profile ||= {};
+  d.programs.forEach(p => { p.id ||= "p" + uid(); p.docs ||= []; p.status ||= "Researching"; p.priority ||= "Medium"; p.fit ||= "Good fit"; });
+}
+
+/* ---------- saving (op queue, conflict-safe) ---------- */
+function mutate(desc, op){
+  if (!token) { toast("Unlock to edit"); return; }
+  op(data); pendingOps.push(op); data.updated = new Date().toISOString().replace(/\.\d+Z$/,"Z");
+  render(); setSave("Unsaved…");
+  clearTimeout(saveTimer); saveTimer = setTimeout(() => flush(desc), 700);
+}
+async function flush(desc){
+  if (saving) { clearTimeout(saveTimer); saveTimer = setTimeout(() => flush(desc), 500); return; }
+  if (!pendingOps.length) return;
+  if (!repo) { setSave("No repo configured – use Export", true); return; }
+  saving = true; setSave("Saving…");
+  const ops = pendingOps.slice();
+  try {
+    try {
+      sha = await writeFile("data.json", JSON.stringify(data, null, 1), sha, "Update tracker: " + desc);
+    } catch (e) {
+      if (e.status !== 409 && e.status !== 422) throw e;
+      // someone else saved in between: rebase our ops onto the latest version
+      const f = await readFile("data.json");
+      const latest = JSON.parse(f.text); normalize(latest);
+      ops.forEach(op => op(latest)); latest.updated = data.updated;
+      data = latest; sha = f.sha;
+      sha = await writeFile("data.json", JSON.stringify(data, null, 1), sha, "Update tracker: " + desc);
+      render();
+    }
+    pendingOps = pendingOps.slice(ops.length);
+    setSave("Saved ✓");
+  } catch (e) {
+    if (e.status === 401 || e.status === 403) { setSave("Token rejected – update it in Settings", true); }
+    else setSave("Save failed (" + (e.detail || e.message) + ") – retrying", true), setTimeout(() => flush(desc), 5000);
+  } finally { saving = false; }
+}
+function setSave(t, err){ const s = $("#saveState"); s.textContent = t; s.classList.toggle("err", !!err); }
+window.addEventListener("beforeunload", e => { if (pendingOps.length) { e.preventDefault(); e.returnValue = ""; } });
+
+/* ---------- lock / unlock ---------- */
+function setLocked(locked){
+  document.body.classList.toggle("unlocked", !locked);
+  $("#lockBtn").textContent = locked ? "Unlock" : "Lock";
+  const pill = $("#lockPill"); pill.textContent = locked ? "View only" : "Editing"; pill.classList.toggle("on", !locked);
+  $("#remForm").style.display = locked ? "none" : "block";
+}
+let secretCache = null;
+async function openUnlock(){
+  $("#uErr").textContent = ""; $("#pwInput").value = "";
+  const sec = await readFile("secret.json");
+  const setup = !!sec.missing || !repo;
+  secretCache = sec.text ? JSON.parse(sec.text) : null; secretCache && (secretCache._sha = sec.sha);
+  $("#setupFields").style.display = setup ? "block" : "none";
+  $("#uTitle").textContent = setup ? "First-time setup" : "Unlock editing";
+  $("#uDesc").textContent = setup ? "Paste a GitHub token once and choose a password. The token is encrypted with your password and stored in the repo, so on any device you only need the password." : "Enter your password to edit. Changes are saved to GitHub and show up on every device.";
+  $("#pwLabel").textContent = setup ? "Choose a password" : "Password";
+  $("#repoInput").value = repo || "";
+  $("#uGo").textContent = setup ? "Encrypt & save" : "Unlock";
+  openModal("#unlockModal"); setTimeout(() => (setup ? $("#tokenInput") : $("#pwInput")).focus(), 50);
+  $("#uGo").onclick = setup ? doSetup : doUnlock;
+}
+async function doUnlock(){
+  const pw = $("#pwInput").value; if (!pw) return;
+  $("#uGo").disabled = true; $("#uErr").textContent = "Checking…";
+  try {
+    for (const e of (secretCache?.entries || [])) {
+      try { const t = await decryptEntry(e, pw); return finishUnlock(t); } catch {}
+    }
+    $("#uErr").textContent = "Wrong password.";
+  } finally { $("#uGo").disabled = false; }
+}
+async function doSetup(){
+  const tok = $("#tokenInput").value.trim(), pw = $("#pwInput").value, rp = $("#repoInput").value.trim();
+  if (!tok || !pw || !/^[\w.-]+\/[\w.-]+$/.test(rp)) { $("#uErr").textContent = "Token, repo (user/repo) and password are all required."; return; }
+  $("#uGo").disabled = true; $("#uErr").textContent = "Checking token…";
+  try {
+    const r = await gh(`/repos/${rp}`, {}, tok);
+    if (!r.ok) throw new Error("Token can't access " + rp + " (" + r.status + ")");
+    const j = await r.json();
+    if (j.permissions && !j.permissions.push) throw new Error("Token has no write access to this repo");
+    repo = rp; store.set(LS.repo, rp);
+    $("#uErr").textContent = "Encrypting…";
+    const entry = await encryptToken(tok, pw);
+    const existing = await readFile("secret.json");
+    await writeFile("secret.json", JSON.stringify({ v:1, note:"GitHub token encrypted with AES-GCM (PBKDF2-SHA256). Password never stored.", entries:[entry] }, null, 1), existing.sha || null, "Set up tracker password", tok);
+    const d = await readFile("data.json");
+    if (d.missing) sha = await writeFile("data.json", JSON.stringify(data, null, 1), null, "Create data.json", tok);
+    else if (d.sha) { sha = d.sha; }
+    finishUnlock(tok); toast("Setup complete – use your password on any device");
+  } catch (e) { $("#uErr").textContent = e.message; }
+  finally { $("#uGo").disabled = false; }
+}
+async function finishUnlock(tok){
+  token = tok;
+  if ($("#rememberChk").checked) store.set(LS.token, tok); else store.sset(LS.token, tok);
+  closeModals(); setLocked(false); toast("Unlocked – editing enabled");
+  // refresh with the latest data + sha
+  const f = await readFile("data.json"); if (f.text) { data = JSON.parse(f.text); normalize(data); sha = f.sha; }
+  render();
+}
+function lock(){ token = null; store.del(LS.token); setLocked(true); ui.editing = false; render(); toast("Locked"); }
+
+/* ---------- settings ---------- */
+async function addPassword(replace){
+  const pw = $("#sNewPw").value; if (!pw) { $("#sErr").textContent = "Enter a password."; return; }
+  $("#sErr").textContent = "Saving…";
+  try {
+    const sec = await readFile("secret.json"); const cur = sec.text ? JSON.parse(sec.text) : { v:1, entries:[] };
+    const e = await encryptToken(token, pw);
+    cur.entries = replace ? [e] : [...(cur.entries||[]), e];
+    await writeFile("secret.json", JSON.stringify(cur, null, 1), sec.sha || null, replace ? "Replace tracker passwords" : "Add tracker password");
+    $("#sErr").textContent = replace ? "Done – only the new password works now." : "Done – password added."; $("#sNewPw").value = "";
+  } catch (e) { $("#sErr").textContent = e.detail || e.message; }
+}
+async function replaceToken(){
+  const tok = $("#sNewToken").value.trim(); const pw = $("#sNewPw").value;
+  if (!tok || !pw) { $("#sErr").textContent = "Enter the new token AND your password (in the password box above) – the token is re-encrypted with it."; return; }
+  $("#sErr").textContent = "Saving…";
+  try {
+    const r = await gh(`/repos/${repo}`, {}, tok); if (!r.ok) throw new Error("New token can't access repo (" + r.status + ")");
+    const sec = await readFile("secret.json");
+    await writeFile("secret.json", JSON.stringify({ v:1, entries:[await encryptToken(tok, pw)] }, null, 1), sec.sha || null, "Rotate tracker token", tok);
+    token = tok; if (store.get(LS.token)) store.set(LS.token, tok); else store.sset(LS.token, tok);
+    $("#sErr").textContent = "Token updated (other passwords removed – re-add if needed)."; $("#sNewToken").value = ""; $("#sNewPw").value = "";
+  } catch (e) { $("#sErr").textContent = e.detail || e.message; }
+}
+
+/* ---------- rendering ---------- */
+function filtered(){
+  const q = ui.q.toLowerCase();
+  let ps = data.programs.filter(p =>
+    (!ui.country || p.country === ui.country) && (!ui.status || p.status === ui.status) &&
+    (!q || [p.uni,p.program,p.city,p.notes,p.requirements,p.intake,COUNTRIES[p.country]].join(" ").toLowerCase().includes(q)));
+  const pr = x => PRIOS.indexOf(x.priority);
+  const dl = x => x.deadline ? (daysLeft(x.deadline) < 0 ? 1e6 + daysLeft(x.deadline) : daysLeft(x.deadline)) : 1e7;
+  const cmp = { deadline:(a,b)=>dl(a)-dl(b)||pr(a)-pr(b), priority:(a,b)=>pr(a)-pr(b)||dl(a)-dl(b),
+    country:(a,b)=>a.country.localeCompare(b.country)||dl(a)-dl(b), status:(a,b)=>STATUSES.indexOf(a.status)-STATUSES.indexOf(b.status)||dl(a)-dl(b),
+    uni:(a,b)=>a.uni.localeCompare(b.uni) }[ui.sort];
+  return ps.sort(cmp);
+}
+function render(){
+  const ps = data.programs;
+  const applied = ps.filter(p => ["Applied","Interview/Test","Admitted","Rejected"].includes(p.status)).length;
+  const admitted = ps.filter(p => p.status === "Admitted").length;
+  const open = ps.filter(p => p.deadline && daysLeft(p.deadline) >= 0 && ["Researching","Preparing docs"].includes(p.status)).sort((a,b)=>daysLeft(a.deadline)-daysLeft(b.deadline));
+  const next = open[0];
+  $("#stats").innerHTML = [
+    [ps.length, "Programs tracked"], [applied, "Applied"], [admitted, "Admitted"],
+    [next ? daysLeft(next.deadline) + "d" : "—", next ? "Next: " + esc(next.uni.split(/[–(]/)[0].trim()) : "No open deadlines"]
+  ].map(([v,l]) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+
+  $("#upcoming").innerHTML = open.slice(0,6).map(p => `<li data-id="${p.id}"><span class="d">${esc(new Date(p.deadline+"T00:00:00").toLocaleDateString(undefined,{day:"numeric",month:"short"}))}</span><span class="cc">${p.country}</span><span class="t">${esc(p.uni)} — ${esc(p.program)}</span>${dueBadge(p)}</li>`).join("") || `<li style="color:var(--muted)">No upcoming deadlines.</li>`;
+
+  const pf = data.profile || {};
+  $("#profile").innerHTML = [["Degree",pf.degree],["GPA",pf.gpa],["English",pf.english],["Highlights",pf.extras]].filter(x=>x[1]).map(([k,v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("");
+  $("#reminders").innerHTML = data.reminders.map(r => `<li class="${r.done?"done":""}" data-rid="${r.id}"><input type="checkbox" ${r.done?"checked":""} ${token?"":"disabled"} aria-label="done"><span>${esc(r.text)}</span>${token?`<button class="btn ghost sm x" data-rdel="${r.id}" aria-label="Remove">✕</button>`:""}</li>`).join("");
+
+  const counts = {}; ps.forEach(p => counts[p.country] = (counts[p.country]||0) + 1);
+  $("#countryChips").innerHTML = `<button class="chip ${!ui.country?"on":""}" data-c="">All ${ps.length}</button>` + Object.keys(COUNTRIES).filter(c=>counts[c]).map(c => `<button class="chip ${ui.country===c?"on":""}" data-c="${c}">${COUNTRIES[c]} ${counts[c]}</button>`).join("");
+
+  const list = filtered();
+  if (!list.length) $("#list").innerHTML = `<div class="empty panel">No programs match.</div>`;
+  else if (ui.view === "cards") $("#list").innerHTML = `<div class="cards">${list.map(card).join("")}</div>`;
+  else $("#list").innerHTML = table(list);
+  $("#updated").textContent = data.updated ? "Last updated " + new Date(data.updated).toLocaleString() : "";
+  if (ui.openId && !ui.editing) renderDrawer();
+}
+function docsProgress(p){ const t = p.docs.length, d = p.docs.filter(x=>x.done).length; return { t, d, pct: t ? Math.round(d/t*100) : 0 }; }
+function card(p){
+  const dp = docsProgress(p), link = safeUrl(p.link), apply = safeUrl(p.applyLink);
+  const statusCtl = token ? `<select class="pill ${STATUS_CLS[p.status]}" data-status="${p.id}" style="border:0" onclick="event.stopPropagation()">${STATUSES.map(s=>`<option ${s===p.status?"selected":""}>${s}</option>`).join("")}</select>` : `<span class="pill ${STATUS_CLS[p.status]||"p-neutral"}">${esc(p.status)}</span>`;
+  return `<article class="card" data-id="${p.id}">
+    <div class="row"><span class="cc" title="${COUNTRIES[p.country]||""}">${p.country}</span><span class="uni" style="flex:1;min-width:0">${esc(p.uni)}</span>${dueBadge(p)}</div>
+    <h3>${esc(p.program)}</h3>
+    <div class="row">${statusCtl}<span class="pill ${FIT_CLS[p.fit]||"p-neutral"}">${esc(p.fit)}</span><span class="pill p-neutral">${esc(p.priority)} priority</span></div>
+    <div class="meta"><span>Intake</span><span>${esc(p.intake||"—")}</span><span>Deadline</span><span>${fmtDate(p.deadline)}${p.opens?` <span style="color:var(--muted)">(opens ${fmtDate(p.opens)})</span>`:""}</span><span>Tuition</span><span>${esc(p.tuition||"—")}</span></div>
+    <div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:3px"><span>Documents</span><span>${dp.d}/${dp.t}</span></div><div class="bar"><i style="width:${dp.pct}%"></i></div></div>
+    <div class="foot">${link?`<a href="${esc(link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Program page ↗</a>`:""}${apply?`<a href="${esc(apply)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply ↗</a>`:""}<span class="spacer"></span>${p.verify?`<span class="verify">● verify</span>`:""}</div>
+  </article>`;
+}
+function table(list){
+  return `<div class="tblwrap"><table class="tbl"><thead><tr><th>Country</th><th>University / program</th><th>Intake</th><th>Deadline</th><th>Status</th><th>Fit</th><th class="hide-sm">Docs</th><th>Links</th></tr></thead><tbody>${list.map(p => {
+    const dp = docsProgress(p), link = safeUrl(p.link), apply = safeUrl(p.applyLink);
+    return `<tr data-id="${p.id}"><td><span class="cc">${p.country}</span></td><td><b>${esc(p.program)}</b><br><span style="color:var(--muted)">${esc(p.uni)}</span></td><td>${esc(p.intake)}</td><td>${fmtDate(p.deadline)}<br>${dueBadge(p)}</td><td><span class="pill ${STATUS_CLS[p.status]}">${esc(p.status)}</span></td><td><span class="pill ${FIT_CLS[p.fit]}">${esc(p.fit)}</span></td><td class="hide-sm">${dp.d}/${dp.t}</td><td>${link?`<a href="${esc(link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Page</a>`:""} ${apply?`<a href="${esc(apply)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply</a>`:""}</td></tr>`;
+  }).join("")}</tbody></table></div>`;
+}
+
+/* ---------- drawer ---------- */
+function openDrawer(id, editing = false){ ui.openId = id; ui.editing = editing; renderDrawer(); $("#drawer").classList.add("open"); $("#scrim").classList.add("open"); $("#drawer").setAttribute("aria-hidden","false"); }
+function closeDrawer(){ ui.openId = null; ui.editing = false; $("#drawer").classList.remove("open"); $("#scrim").classList.remove("open"); $("#drawer").setAttribute("aria-hidden","true"); }
+function renderDrawer(){
+  const p = data.programs.find(x => x.id === ui.openId); if (!p) { closeDrawer(); return; }
+  $("#dUni").textContent = `${COUNTRIES[p.country]||p.country} · ${p.uni}${p.city ? " · " + p.city : ""}`;
+  $("#dTitle").textContent = p.program;
+  if (ui.editing && token) return renderEditForm(p);
+  const link = safeUrl(p.link), apply = safeUrl(p.applyLink);
+  const kv = [["Status",`<span class="pill ${STATUS_CLS[p.status]}">${esc(p.status)}</span>`],["Fit",`<span class="pill ${FIT_CLS[p.fit]}">${esc(p.fit)}</span>`],["Priority",esc(p.priority)],
+    ["Intake",esc(p.intake)],["Opens",fmtDate(p.opens)],["Deadline",fmtDate(p.deadline) + " " + dueBadge(p)],["Portal",esc(p.portal)],["Tuition",esc(p.tuition)],["English",esc(p.english)],["GPA",esc(p.gpaReq)],
+    ["Links",`${link?`<a href="${esc(link)}" target="_blank" rel="noopener">Program page ↗</a>`:""} ${apply?` · <a href="${esc(apply)}" target="_blank" rel="noopener">Apply ↗</a>`:""}`]];
+  $("#dBody").innerHTML = `
+    <div class="sec kv">${kv.filter(x=>x[1] && x[1] !== "—").map(([k,v]) => `<div class="k">${k}</div><div>${v}</div>`).join("")}</div>
+    ${p.deadlineNote?`<div class="sec"><h4>Deadline notes</h4><p>${esc(p.deadlineNote)}</p></div>`:""}
+    ${p.requirements?`<div class="sec"><h4>Requirements</h4><p>${esc(p.requirements)}</p></div>`:""}
+    <div class="sec"><h4>Documents checklist (${docsProgress(p).d}/${p.docs.length})</h4><ul class="docs">${p.docs.map((d,i) => `<li><input type="checkbox" id="doc${i}" data-doc="${i}" ${d.done?"checked":""} ${token?"":"disabled"}><label for="doc${i}" style="${d.done?"text-decoration:line-through;color:var(--muted)":""}">${esc(d.name)}</label></li>`).join("")}</ul></div>
+    <div class="sec"><h4>Notes</h4><p>${esc(p.notes) || '<span style="color:var(--muted)">—</span>'}</p></div>
+    ${p.verify?`<p class="verify">● Researched Sept 2026 — confirm details on the official page before applying.</p>`:""}`;
+  $("#dFoot").innerHTML = token ? `<button class="btn primary" id="dEdit">Edit</button><span class="spacer"></span><button class="btn danger" id="dDel">Delete</button>` : `<span style="color:var(--muted);font-size:13px">Unlock to edit this program.</span>`;
+}
+function renderEditForm(p){
+  const f = (k,label,type="text",cls="") => `<label class="${cls}">${label}<input name="${k}" type="${type}" value="${esc(p[k]||"")}"></label>`;
+  const s = (k,label,opts) => `<label>${label}<select name="${k}">${opts.map(o => `<option value="${esc(o[0]??o)}" ${(o[0]??o)===p[k]?"selected":""}>${esc(o[1]??o)}</option>`).join("")}</select></label>`;
+  const t = (k,label) => `<label class="full">${label}<textarea name="${k}">${esc(p[k]||"")}</textarea></label>`;
+  $("#dBody").innerHTML = `<form class="form" id="editForm">
+    ${f("uni","University","text","full")}${f("program","Program","text","full")}
+    ${s("country","Country",Object.entries(COUNTRIES))}${f("city","City")}
+    ${s("status","Status",STATUSES)}${s("fit","Fit",FITS)}
+    ${s("priority","Priority",PRIOS)}${f("intake","Intake")}
+    ${f("opens","Application opens","date")}${f("deadline","Deadline","date")}
+    ${t("deadlineNote","Deadline notes")}
+    ${f("link","Program page URL","url","full")}${f("applyLink","Application URL","url","full")}
+    ${f("portal","Portal")}${f("tuition","Tuition")}
+    ${f("english","English requirement")}${f("gpaReq","GPA requirement")}
+    ${t("requirements","Requirements")}
+    <label class="full">Documents (one per line — ticks are kept for unchanged names)<textarea name="docs" rows="7">${esc(p.docs.map(d=>d.name).join("\n"))}</textarea></label>
+    ${t("notes","Notes")}
+    <label class="check full"><input type="checkbox" name="verify" ${p.verify?"checked":""}> Needs verification</label>
+  </form>`;
+  $("#dFoot").innerHTML = `<button class="btn primary" id="dSave">Save</button><button class="btn" id="dCancel">Cancel</button>`;
+}
+function saveEditForm(){
+  const fd = new FormData($("#editForm")); const id = ui.openId;
+  const vals = Object.fromEntries(fd.entries()); vals.verify = fd.has("verify");
+  if (!vals.uni.trim() || !vals.program.trim()) { toast("University and program are required"); return; }
+  const names = vals.docs.split("\n").map(s=>s.trim()).filter(Boolean); delete vals.docs;
+  mutate("edit " + vals.uni, d => {
+    const p = d.programs.find(x => x.id === id); if (!p) return;
+    const old = Object.fromEntries(p.docs.map(x => [x.name, x.done]));
+    Object.assign(p, vals); p.docs = names.map(n => ({ name:n, done: !!old[n] }));
+  });
+  ui.editing = false; renderDrawer();
+}
+
+/* ---------- modals ---------- */
+function openModal(sel){ $("#scrim").classList.add("open"); $(sel).classList.add("open"); }
+function closeModals(){ document.querySelectorAll(".modal").forEach(m => m.classList.remove("open")); if (!ui.openId) $("#scrim").classList.remove("open"); }
+
+/* ---------- events ---------- */
+$("#lockBtn").onclick = () => token ? lock() : openUnlock();
+$("#uCancel").onclick = closeModals;
+$("#pwInput").addEventListener("keydown", e => { if (e.key === "Enter") $("#uGo").click(); });
+$("#scrim").onclick = () => { closeModals(); closeDrawer(); };
+document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModals(); closeDrawer(); } });
+$("#dClose").onclick = closeDrawer;
+$("#q").oninput = e => { ui.q = e.target.value; render(); };
+STATUSES.forEach(s => $("#statusFilter").insertAdjacentHTML("beforeend", `<option>${s}</option>`));
+$("#statusFilter").onchange = e => { ui.status = e.target.value; render(); };
+$("#sortBy").onchange = e => { ui.sort = e.target.value; render(); };
+$("#countryChips").onclick = e => { const b = e.target.closest("[data-c]"); if (b) { ui.country = b.dataset.c; render(); } };
+const setView = v => { ui.view = v; store.set(LS.view, v); $("#vCards").classList.toggle("on", v==="cards"); $("#vTable").classList.toggle("on", v==="table"); render(); };
+$("#vCards").onclick = () => setView("cards"); $("#vTable").onclick = () => setView("table");
+$("#list").addEventListener("click", e => { const c = e.target.closest("[data-id]"); if (c && !e.target.closest("select,a")) openDrawer(c.dataset.id); });
+$("#list").addEventListener("change", e => { const s = e.target.closest("[data-status]"); if (s) { const id = s.dataset.status, v = s.value; mutate("status → " + v, d => { const p = d.programs.find(x=>x.id===id); if (p) p.status = v; }); } });
+$("#upcoming").addEventListener("click", e => { const c = e.target.closest("[data-id]"); if (c) openDrawer(c.dataset.id); });
+$("#dBody").addEventListener("change", e => {
+  const cb = e.target.closest("[data-doc]"); if (!cb || !token) return;
+  const id = ui.openId, i = +cb.dataset.doc, v = cb.checked;
+  mutate("docs", d => { const p = d.programs.find(x=>x.id===id); if (p && p.docs[i]) p.docs[i].done = v; });
+});
+let delArmed = false;
+$("#dFoot").addEventListener("click", e => {
+  const id = e.target.id;
+  if (id === "dEdit") { ui.editing = true; renderDrawer(); }
+  else if (id === "dCancel") { ui.editing = false; renderDrawer(); }
+  else if (id === "dSave") saveEditForm();
+  else if (id === "dDel") {
+    if (!delArmed) { delArmed = true; e.target.textContent = "Click again to delete"; setTimeout(() => { delArmed = false; if (e.target.isConnected) e.target.textContent = "Delete"; }, 3000); return; }
+    delArmed = false; const pid = ui.openId; closeDrawer();
+    mutate("delete program", d => { d.programs = d.programs.filter(x => x.id !== pid); });
+  }
+});
+$("#addBtn").onclick = () => {
+  const id = "p" + uid();
+  mutate("add program", d => d.programs.push({ id, uni:"New university", program:"New program", country:"DE", city:"", intake:"", opens:"", deadline:"", deadlineNote:"", link:"", applyLink:"", portal:"", tuition:"", requirements:"", english:"", gpaReq:"", fit:"Good fit", priority:"Medium", status:"Researching", notes:"", verify:true, docs:["Transcripts","IELTS TRF","CV","Motivation letter","LOR – Dr Bhargava","LOR – Dr Sebastian"].map(n=>({name:n,done:false})) }));
+  openDrawer(id, true);
+};
+$("#reminders").addEventListener("change", e => { const li = e.target.closest("[data-rid]"); if (li && token) { const rid = li.dataset.rid, v = e.target.checked; mutate("reminder", d => { const r = d.reminders.find(x=>x.id===rid); if (r) r.done = v; }); } });
+$("#reminders").addEventListener("click", e => { const b = e.target.closest("[data-rdel]"); if (b) { const rid = b.dataset.rdel; mutate("remove reminder", d => { d.reminders = d.reminders.filter(x=>x.id!==rid); }); } });
+$("#remForm").onsubmit = e => { e.preventDefault(); const v = $("#remInput").value.trim(); if (!v) return; const id = "r" + uid(); mutate("add reminder", d => d.reminders.push({ id, text:v, done:false })); $("#remInput").value = ""; };
+$("#settingsBtn").onclick = () => { $("#sRepo").textContent = repo || "(none)"; $("#sErr").textContent = ""; $("#sDark").checked = document.documentElement.dataset.theme === "dark"; openModal("#settingsModal"); };
+$("#sClose").onclick = closeModals;
+$("#sAddPw").onclick = () => addPassword(false);
+$("#sReplacePw").onclick = () => addPassword(true);
+$("#sSetToken").onclick = replaceToken;
+$("#sDark").onchange = e => { const t = e.target.checked ? "dark" : ""; if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; store.set(LS.theme, t); };
+$("#exportBtn").onclick = e => { e.preventDefault(); const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 1)], { type:"application/json" })); a.download = "data.json"; a.click(); };
+$("#importBtn").onclick = e => { e.preventDefault(); $("#importFile").click(); };
+$("#importFile").onchange = async e => { const f = e.target.files[0]; if (!f) return; try { const j = JSON.parse(await f.text()); normalize(j); mutate("import", d => { Object.keys(d).forEach(k => delete d[k]); Object.assign(d, JSON.parse(JSON.stringify(j))); }); toast("Imported"); } catch { toast("Invalid JSON"); } e.target.value = ""; };
+
+/* ---------- boot ---------- */
+const th = store.get(LS.theme); if (th) document.documentElement.dataset.theme = th;
+if (store.get(LS.view) === "table") { ui.view = "table"; $("#vCards").classList.remove("on"); $("#vTable").classList.add("on"); }
+load();
+})();
+</script>
+</body>
+</html>
