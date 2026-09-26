@@ -25,6 +25,7 @@ const DOCS = {
   degree: ['Degree / provisional certificate', 'Ask Mahindra University for the provisional certificate.'],
   ielts: ['IELTS TRF', 'Valid 2 years from the test date.'],
   aps: ['APS certificate (India)', 'Required for every German application. Takes weeks.'],
+  dmat: ['dMAT certificate (APS India)', 'Needed with APS for German master\'s from summer 2027, unless your APS registration was before 29 Jun 2026. Mark Not needed if exempt.'],
   cv: ['CV (Europass style)', ''],
   sop: ['Statement of purpose', 'Tailor one per programme; track each under Applications.'],
   lor1: ['LOR: Dr Bhargava', ''],
@@ -34,7 +35,8 @@ const DOCS = {
   appfee: ['Application fee paid', 'SEK 900 for Sweden; €100 at some Dutch universities.'],
   funds: ['Proof of funds', 'Blocked account, bank statements or scholarship letter.']
 };
-const DOC_STATUS = [['not-started', 'Not started'], ['in-progress', 'In progress'], ['ready', 'Ready']];
+const DOC_STATUS = [['not-started', 'Not started'], ['in-progress', 'In progress'], ['ready', 'Ready'], ['na', 'Not needed']];
+const docDone = k => ['ready', 'na'].includes(S.priv.documents[k]?.status);
 const COUNTRY = { DE: 'Germany', SE: 'Sweden', NL: 'Netherlands', FR: 'France', NO: 'Norway', EU: 'Multi-country' };
 const VIEWS = [['dash', 'Dashboard'], ['programs', 'Programs'], ['apps', 'Applications'], ['timeline', 'Timeline'], ['docs', 'Documents'], ['budget', 'Budget'], ['visa', 'Visa & move'], ['settings', 'Settings']];
 
@@ -113,7 +115,8 @@ window.addEventListener('beforeunload', e => { if (S.dirty) { e.preventDefault()
 // ---------------------------------------------------------------- derived data
 function programs() {
   const custom = S.priv?.custom || [];
-  return [...S.research.programs, ...custom].map(p => {
+  const found = (S.updates.add || []).filter(a => !S.research.programs.some(p => p.id === a.id));
+  return [...S.research.programs, ...found, ...custom].map(p => {
     const u = S.updates.changes?.[p.id];
     const m = clone(p);
     if (u?.set) Object.entries(u.set).forEach(([k, v]) => setPath(m, k, v));
@@ -121,6 +124,7 @@ function programs() {
     m._updates = u || null;
     m._app = app(p.id);
     m._custom = custom.includes(p);
+    m._found = found.includes(p);
     return m;
   });
 }
@@ -152,7 +156,7 @@ function eligibility(p) {
 function readiness(p) {
   const keys = p.docs || [];
   if (!keys.length) return 0;
-  const done = keys.filter(k => k === 'sop' ? p._app.sop === 'ready' : S.priv.documents[k]?.status === 'ready').length;
+  const done = keys.filter(k => k === 'sop' ? p._app.sop === 'ready' : docDone(k)).length;
   return Math.round(done / keys.length * 100);
 }
 function events() {
@@ -199,7 +203,7 @@ const V = {};
 V.dash = () => {
   const ps = programs(), sl = ps.filter(shortlisted);
   const docKeys = Object.keys(DOCS).filter(k => ps.some(p => shortlisted(p) && (p.docs || []).includes(k)));
-  const docsPct = docKeys.length ? Math.round(docKeys.filter(k => S.priv.documents[k]?.status === 'ready').length / docKeys.length * 100) : 0;
+  const docsPct = docKeys.length ? Math.round(docKeys.filter(k => docDone(k)).length / docKeys.length * 100) : 0;
   const submitted = sl.filter(p => STAGE_RANK[p._app.stage] >= 3).length;
   const admitted = ps.filter(p => ['admitted', 'accepted'].includes(p._app.stage)).length;
   const accepted = ps.find(p => p._app.stage === 'accepted');
@@ -213,7 +217,7 @@ V.dash = () => {
     ['Documents', `${docsPct}% ready`, docsPct],
     ['Apply', `${submitted}/${sl.length || 0} submitted`, sl.length ? Math.round(submitted / sl.length * 100) : 0],
     ['Decisions', `${admitted} admit${admitted === 1 ? '' : 's'}`, admitted ? 100 : 0],
-    ['Finance', S.priv.documents.funds?.status === 'ready' ? 'Funds ready' : 'Plan funds', { 'not-started': 0, 'in-progress': 50, ready: 100 }[S.priv.documents.funds?.status || 'not-started']],
+    ['Finance', S.priv.documents.funds?.status === 'ready' ? 'Funds ready' : 'Plan funds', { 'not-started': 0, 'in-progress': 50, ready: 100, na: 100 }[S.priv.documents.funds?.status || 'not-started']],
     ['Visa', accepted ? `${pctOf(visaSteps.filter(s => !s[2].startsWith('After arrival')))}%` : 'After an offer', accepted ? pctOf(visaSteps.filter(s => !s[2].startsWith('After arrival'))) : 0],
     ['Departure', accepted ? 'Housing, flights' : '—', accepted ? pctOf(visaSteps.filter(s => /housing|flight/i.test(s[0]))) : 0],
     ['Arrival', accepted ? `${pctOf(phase('After arrival'))}%` : '—', accepted ? pctOf(phase('After arrival')) : 0]
@@ -268,7 +272,7 @@ V.programs = () => {
     <div class="pc" data-open="${esc(p.id)}">
       <div class="uni"><span class="cc">${p.country}</span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(p.uni)}</span>${daysBadge(p.dates?.deadline)}</div>
       <h3>${esc(p.program)}</h3>
-      <div class="row">${eligPill(e)}${p.verify ? pill('mute', 'verify') : ''}${p._updates?.log?.length ? pill('cu', 'updated') : ''}</div>
+      <div class="row">${eligPill(e)}${p.verify ? pill('mute', 'verify') : ''}${p._found ? pill('cu', 'new find') : p._updates?.log?.length ? pill('cu', 'updated') : ''}</div>
       <div class="meta"><span>Intake</span><span>${esc(p.intake)}</span><span>Deadline</span><span>${fmtDate(p.dates?.deadline)}</span><span>Tuition/yr</span><span>${eur(tuitionPerYearEUR(p))}</span></div>
       <div class="foot">${stageSelect(p)}<label class="cmp" onclick="event.stopPropagation()"><input type="checkbox" data-cmp="${esc(p.id)}" ${S.compare.includes(p.id) ? 'checked' : ''}>compare</label></div>
     </div>`; }).join('') || '<div class="empty2">No programmes match.</div>'}</div>`;
@@ -392,7 +396,7 @@ function openProgram(id, edit = false) {
       <dt>Portal</dt><dd>${esc(p.portal || '—')}</dd>
       <dt>Links</dt><dd>${p.links?.program ? `<a href="${esc(p.links.program)}" target="_blank" rel="noopener">Programme page ↗</a>` : ''} ${p.links?.apply ? ` · <a href="${esc(p.links.apply)}" target="_blank" rel="noopener">Apply ↗</a>` : ''}</dd>
     </dl></div>
-    <div class="panel"><h2>Documents · ${readiness(p)}%</h2>${(p.docs || []).map(k => { const ok = k === 'sop' ? a.sop === 'ready' : S.priv.documents[k]?.status === 'ready'; return `<div class="check ${ok ? 'done' : ''}">${pill(ok ? 'ok' : 'mute', ok ? '✓' : '·')}<div class="t">${esc(DOCS[k]?.[0] || k)}</div></div>`; }).join('')}<p class="small muted">Change statuses under Documents; the SOP is tracked above.</p></div>
+    <div class="panel"><h2>Documents · ${readiness(p)}%</h2>${(p.docs || []).map(k => { const ok = k === 'sop' ? a.sop === 'ready' : docDone(k); return `<div class="check ${ok ? 'done' : ''}">${pill(ok ? 'ok' : 'mute', ok ? '✓' : '·')}<div class="t">${esc(DOCS[k]?.[0] || k)}</div></div>`; }).join('')}<p class="small muted">Change statuses under Documents; the SOP is tracked above.</p></div>
     <div class="panel"><h2>Research log</h2>
       <p class="small" style="margin:0 0 8px">Last verified: <b>${fmtDate(p.lastVerified)}</b>${p.verify ? ' · some facts still need confirming on the official page' : ''}</p>
       ${(p._updates?.log || []).slice().reverse().map(x => `<div class="alert info"><div><b>${fmtDate(x.date)}</b>${esc(x.text)}${x.source ? ` <a href="${esc(x.source)}" target="_blank" rel="noopener">source</a>` : ''}</div></div>`).join('')}
@@ -424,7 +428,8 @@ function editForm(p) {
   <p class="small muted">Programme facts are public (no personal data). Saved facts are marked as verified today.</p></div>`;
 }
 function saveEdit(id) {
-  const base = S.research.programs.find(x => x.id === id) || S.priv.custom.find(x => x.id === id);
+  let base = S.research.programs.find(x => x.id === id) || S.priv.custom.find(x => x.id === id);
+  if (!base) { const f = (S.updates.add || []).find(x => x.id === id); if (!f) return; base = clone(f); S.research.programs.push(base); }
   document.querySelectorAll('[data-ed]').forEach(el => {
     let v = el.value.trim(), k = el.dataset.ed;
     if (['fields', 'docs'].includes(k)) v = v ? v.split(',').map(s => s.trim()).filter(Boolean) : [];
