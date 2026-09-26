@@ -15,11 +15,11 @@
 <body>
 
 <section id="lock" class="lock dark traces">
-  <form id="lockForm" class="lock-box" autocomplete="off">
+  <form id="lockForm" class="lock-box">
     <span class="eyebrow">Masters Journey</span>
     <h1>Private tracker</h1>
     <p>Research, applications, documents, money and visa, from shortlist to arrival. Enter your password to open it.</p>
-    <input id="pw" type="password" inputmode="numeric" placeholder="••••" aria-label="Password" required>
+    <div class="pwrap"><input id="pw" name="password" type="password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="Password" aria-label="Password" required><button type="button" class="pshow" aria-label="Show password" onclick="const i=document.getElementById('pw'),s=i.type==='password';i.type=s?'text':'password';this.textContent=s?'Hide':'Show';i.focus()">Show</button></div>
     <label class="chk"><input id="remember" type="checkbox" checked style="width:auto;letter-spacing:0;padding:0"> Remember on this device</label>
     <button id="lockGo" class="btn btn-copper" type="submit">Unlock</button>
     <div id="lockErr" class="err" role="alert"></div>
