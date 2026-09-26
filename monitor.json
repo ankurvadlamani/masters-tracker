@@ -1,4 +1,217 @@
 {
- "lastRun": null,
- "pages": {}
+ "lastRun": "2026-09-26T05:46:50Z",
+ "pages": {
+  "https://rptu.de/en/international/master/prospective-students/master-programs/master-programs-in-english": {
+   "program": "rptu-esy",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "4b0555f0014560220cc13b5ca3bf984315b202ebeed4f0d7cdf8fdd7248c3609",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://applymsc.eit.rptu.de/": {
+   "program": "rptu-esy",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "648e6821df5b68f47885b32d59ba41c15bd8044cfcaf2fab1f73af122ed7cdb6",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.uni-saarland.de/en/study/programmes/master/embedded-systems.html": {
+   "program": "saarland-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "2ab9a95d16edef2e6104c25562a7efc16a05242968105c0a4597b034c87e5d5d",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://saarland-informatics-campus.de/en/studium-studies/master-english/application-guide/": {
+   "program": "saarland-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "f947ff28ffd8d64cfb20bba47db4be58952507752e1554036b211b915de8e808",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.tum.de/en/studies/degree-programs/detail/robotics-cognition-intelligence-master-of-science-msc": {
+   "program": "tum-rci",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "94e530d96a58c6de5980398fce41dbaa0866c01634a817d3a3e2996c2a57fcca",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://campus.tum.de/": {
+   "program": "tum-rci",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "10c98977b028ea4254a7ece111759453196a8a75e666c35f8db66779cd872a00",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/5625/": {
+   "program": "paderborn-ce",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "c7d640e01aaf96d29a7de15a88b20046007ff14d21bd800d3afd963cccb1edbf",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.uni-paderborn.de/en/studies/international-office/degree-students/application-for-admission-terms/application-deadlines": {
+   "program": "paderborn-ce",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "706393038bd323334db4c9e1d22ca5f67984e797d733f064a81e4914fb8af430",
+   "dates": [
+    "(starting in April) until 30 November. Extended deadline to submit additional documents: January 15, 2026 Please submit your educational document"
+   ],
+   "status": "ok"
+  },
+  "https://uni-freiburg.de/en/studies/degree-programmes/degree-programme/399/": {
+   "program": "freiburg-ese",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "b66b049e71d15e1ccb17fcb807cceb0bd61ea40b0869314d43cb55c6a6c21955",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_es": {
+   "program": "chemnitz-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "707f6e51eeabdba58868e584c0acca945095468d2c6e13359eff613d52d3eec5",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.tu-chemnitz.de/studierendenservice/studserv/bewerbung/bew_bamala.php.en": {
+   "program": "chemnitz-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "ffb2ef7e74e4ec7c1a2c18f5972d917b6eb95064dd1ed1b71c7ed5d799a2c7c0",
+   "dates": [
+    "ning of the winter semester in a cherished … Zentrum für den wissenschaftlichen Nachwuchs 10/11/2026 10 Nov TUCgraduate Day The TUCgraduate"
+   ],
+   "status": "ok"
+  },
+  "https://www.kth.se/en/studies/master/embedded-systems": {
+   "program": "kth-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "d0c2179cc327e3f3c6a91e3854e0eb6c0ceb4f27eea931b3c28e837ef83cfc72",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.chalmers.se/en/education/find-masters-programme/embedded-electronic-system-design-msc/": {
+   "program": "chalmers-eesd",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "status": "error",
+   "error": "HTTP Error 404: Not Found"
+  },
+  "https://www.lunduniversity.lu.se/study/embedded-electronics-engineering-masters-programme-TAEEE": {
+   "program": "lund-eee",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "f2740cfe38a4151a400457e8417ad8fec026181c3c6dc70d69bc6c04fc5a2c72",
+   "dates": [
+    "emester 2027 Will open for applications 16 October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029",
+    "ll open for applications 16 October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal",
+    "ications 16 October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Fu",
+    "October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Full time Lan"
+   ],
+   "status": "ok"
+  },
+  "https://www.mastersportal.com/studies/394555/computer-and-embedded-systems-engineering.html": {
+   "program": "delft-cese",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "status": "error",
+   "error": "HTTP Error 403: Forbidden"
+  },
+  "https://www.utwente.nl/en/education/master/programmes/electrical-engineering/": {
+   "program": "twente-ee",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "fd870784e74b6d39a8164b48c25d4b6fbce0b3b66e2925e8fdb5ee2b62ed12ea",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.utwente.nl/en/education/master/programmes/robotics/": {
+   "program": "twente-rob",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "c40ecb1f3f74ae2d89c5052fc5e1ceb9c043657d3ecc2dc6508aa2a7f743c44d",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.tue.nl/en/education/graduate-school/master-embedded-systems": {
+   "program": "tue-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "47ac542c61280e03781c13fc2c1a7454a8a59b7296a397c9a53ad06b767a61e3",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/programtype/master-program/program/embedded-systems/country/india": {
+   "program": "tue-es",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "d7f8a4b6b4a8331365490468869c4ef375cb281cfd7fc79468cacc9ab84b545e",
+   "dates": [
+    "ence and what steps you need to take to enroll. The information below was last updated on September 10, 2026, and applies to applications for 2027–2"
+   ],
+   "status": "ok"
+  },
+  "https://jemaro.ec-nantes.fr/": {
+   "program": "jemaro",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "1ff92554c3148210b0ca5119388420a179ebbc4b236f42b811a2b80fcb8b300a",
+   "dates": [
+    "egree Erasmus + JEMARO at Keio Admission Partners Scholarships News & Events Published on September 4, 2019 Updated on May 7, 2024 Share : Facebook",
+    "o Admission Partners Scholarships News & Events Published on September 4, 2019 Updated on May 7, 2024 Share : Facebook X Linkedin https://jem"
+   ],
+   "status": "ok"
+  },
+  "https://master-jemaro.ec-nantes.fr": {
+   "program": "jemaro",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "6627e30a413e07998450aba92425230dc6175a70b21b1cc99bb1484c88d96ebe",
+   "dates": [
+    "e=\"aaa\" disabled=\"disabled\"> The registration process is closed. Current CET date & time: 26/09/2026 07:47 (C) JEMARO 2023. Contact us"
+   ],
+   "status": "ok"
+  },
+  "https://ense3.grenoble-inp.fr/en/study-at-ense3/master-tsi-mobile-autonomous-and-robotic-systems-mars": {
+   "program": "grenoble-mars",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "7c8b4a46657f88106f056db353a102a303e5acda2cb8ea1cd69054fc13d1747a",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://applicationform.grenoble-inp.fr": {
+   "program": "grenoble-mars",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "status": "error",
+   "error": "HTTP Error 403: Forbidden"
+  },
+  "https://centralelille.fr/": {
+   "program": "centrale-lille",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "38b3940fd31fec8dc6cb1aaa62242d519ef247f583c0dda56e24f884a5973d6f",
+   "dates": [],
+   "status": "ok"
+  },
+  "https://ssi-master.eu/": {
+   "program": "ssi2",
+   "lastChecked": "2026-09-26T05:46:50Z",
+   "firstSeen": "2026-09-26T05:46:50Z",
+   "hash": "4c49078d537e49c14458560d40e5c85deb4a4bfc1fa33df71d6fc8fd4334f569",
+   "dates": [
+    "ons of three European countries! Admission will open, and website will be updated, around 1 October 2026 Joint International Master in Smart Sys"
+   ],
+   "status": "ok"
+  }
+ }
 }
