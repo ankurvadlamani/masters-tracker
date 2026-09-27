@@ -1,4 +1,929 @@
 {
- "runs": [],
- "changes": {}
+ "runs": [
+  {
+   "date": "2026-09-27",
+   "summary": "Checked all 41 tracked programmes on official pages. Key changes: Paderborn CE now requires GRE or dMAT; Saarland needs IELTS 7 + GRE/GATE; TU Delft CESE needs IELTS 7.0/6.5 + GRE and 2027/28 tuition is €26,479; TU/e Embedded Systems requires CGPA 8.5/10 for India (below 7.67); WHZ deadline moved to 30 Apr 2027; JEMARO has no 2026–28 intake; Twente/TU/e 2027/28 tuition published. Added Bremen CMM, TU Ilmenau RCSE, RWU EEES, Uppsala Embedded Systems and Linköping Electronics Engineering. Still unconfirmed: UiO (site blocked), Chalmers and Halmstad fees, TUM RCI tuition, Paris-Saclay fee exemption, EIT/SSI2 2027 dates.",
+   "checked": 41
+  }
+ ],
+ "changes": {
+  "rptu-esy": {
+   "set": {
+    "requirements.gpa": "CGPA ≥ 3.5/4 or equivalent",
+    "requirements.ielts": 6,
+    "requirements.english": "IELTS 6.0 (RPTU general requirement; may be waived for some English-medium degrees)",
+    "links.program": "https://eit.rptu.de/en/esy/",
+    "verify": false
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed summer 2027 window 1 May–31 Oct 2026 and no tuition; admission page asks for GPA ≥3.5/4 (or equivalent) and IELTS 6.0; the portal mentions a credential-assessment fee with no amount stated.",
+     "source": "https://eit.rptu.de/en/esy/admission"
+    }
+   ]
+  },
+  "saarland-es": {
+   "set": {
+    "requirements.ielts": 7,
+    "requirements.text": "Bachelor in CS / CE / EE or related. English C1 (IELTS 7.0 / TOEFL iBT 95; MOI not accepted). GRE General or GATE required for non-EHEA degrees (no minimum score). APS required for Indian degrees. 2 recommendation letters.",
+    "deadlineNote": "Summer semester: early deadline 15 May (decision late July), late deadline 15 Nov.",
+    "verify": false
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed 15 Nov summer deadline and no tuition; requires IELTS 7.0, GRE or GATE (no minimum), APS and two recommendation letters.",
+     "source": "https://saarland-informatics-campus.de/en/studium-studies/master-english/application-guide/"
+    }
+   ]
+  },
+  "tum-rci": {
+   "set": {
+    "requirements.text": "Aptitude assessment (GPA + curriculum match + possibly interview). Strong maths & CS expected. APS required for Indian degrees."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed summer window 1 Oct–30 Nov 2026 and APS requirement; exact non-EU tuition (€4,000 or €6,000 per semester) is not shown on the programme page.",
+     "source": "https://www.tum.de/en/studies/degree-programs/detail/robotics-cognition-intelligence-master-of-science-msc"
+    }
+   ]
+  },
+  "paderborn-ce": {
+   "set": {
+    "links.program": "https://www.uni-paderborn.de/en/studyoffer/course_of_study/computer-engineering-master",
+    "requirements.ielts": 6.5,
+    "requirements.prereqs": [
+     "≥15 CP mathematics",
+     "≥30 CP computer science",
+     "≥30 CP electrical engineering",
+     "GRE (Quant ≥157, AW ≥3.0) or dMAT mandatory"
+    ],
+    "requirements.text": "Non-EU via uni-assist. GRE (Q≥157, AW≥3.0) or dMAT is mandatory — applications without it cannot be processed. APS required. IELTS 6.5 / TOEFL iBT 80.",
+    "deadlineNote": "Summer semester deadline 30 Nov; additional documents may follow by mid-January (2027 date not yet posted).",
+    "verify": false
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Official page confirms the 30 Nov summer deadline and adds a mandatory GRE (Q≥157, AW≥3.0) or dMAT, APS, IELTS 6.5 and minimum credit requirements; programme link switched from DAAD to the official page.",
+     "source": "https://www.uni-paderborn.de/en/studies/international-office/degree-students/application-for-admission-terms/application-for-admission-procedure-and-documents"
+    }
+   ]
+  },
+  "freiburg-ese": {
+   "set": {
+    "requirements.english": "English C1 (or German C1 + English B2); no IELTS score published"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed non-EU summer window 1 Nov–15 Dec and €1,500/semester tuition plus €190 fee; English C1 required.",
+     "source": "https://uni-freiburg.de/en/studies/degree-programmes/degree-programme/399/"
+    }
+   ]
+  },
+  "chemnitz-es": {
+   "set": {
+    "tuition.amount": 645,
+    "tuition.note": "No tuition; semester contribution €322.50 (summer 2026 figure)",
+    "requirements.english": "English B2 (no IELTS score published)",
+    "requirements.text": "Relevant bachelor (individual decision). German A1 at application, A2 by 3rd semester. APS required for Indian applicants; apply via uni-assist."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed 15 Jul 2027 winter deadline, English B2 and German A1; semester contribution is now €322.50 and APS is required.",
+     "source": "https://www.tu-chemnitz.de/studierendenservice/studserv/sembeitrag.php.en"
+    }
+   ]
+  },
+  "luebeck-ras": {
+   "set": {
+    "requirements.prereqs": [
+     "≥32 ECTS mathematics",
+     "≥28 ECTS technology and informatics (no explicit mechanics requirement in the admission rules)"
+    ],
+    "requirements.gpa": "German grade 2.7 or better (otherwise individual review)",
+    "requirements.english": "English B2 (no IELTS score published)",
+    "requirements.text": "≥32 ECTS maths and ≥28 ECTS technology/informatics. APS required for Indian applicants; apply via uni-assist."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed uni-assist summer window 1 Sep–15 Oct 2026; the admission rules require 28 ECTS technology/informatics with no mechanics mention, grade 2.7 or better, and APS.",
+     "source": "https://www.uni-luebeck.de/fileadmin/uzl_hochschulrecht/Recht_Universitaet/Leseabschriften/190704_SGO_Robotics_MSc_Leseabschrift_English_nach_1Ae.pdf"
+    }
+   ]
+  },
+  "tudo-automation-robotics": {
+   "set": {
+    "requirements.text": "Bachelor with German grade 2.0 or better; ≥10% maths and ≥6.7% computer systems/programming credits. IELTS Academic 7 (or TOEFL iBT 95), under 2 years old. APS mandatory for India. No control/mechanics prerequisite."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed two intakes a year, summer applications via uni-assist from November to 15 Jan, IELTS 7, grade 2.0 and APS; no control or mechanics prerequisite.",
+     "source": "https://etit.tu-dortmund.de/en/studies-and-teaching/degree-programs/master-ar/information-application-beginning-of-the-study-program-1/"
+    }
+   ]
+  },
+  "hbrs-autonomous-systems": {
+   "set": {
+    "requirements.text": "Bachelor in CS or ≥90 ECTS CS content, grade 2.5 or better, English B2+ (IELTS 6.5), APS for India, CV and 2-page motivation letter. 15 seats."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed winter window 15 Nov–15 Feb via uni-assist, IELTS 6.5, grade 2.5, ≥90 ECTS CS content and APS; decisions by 31 Mar.",
+     "source": "https://www.h-brs.de/en/inf/admission-application-master-autonomous-systems"
+    }
+   ]
+  },
+  "hof-ai-robotics": {
+   "set": {
+    "requirements.gpa": "2.5 (German scale)"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed summer-only intake with Primuss window 5–30 Nov, uni-assist check at least 4 weeks before the deadline, IELTS 6.5, German A1, 210 credits and grade 2.5.",
+     "source": "https://www.hof-university.com/studying-at-hof-university/our-degree-programs/artificial-intelligence-and-robotics-msc.html"
+    }
+   ]
+  },
+  "thd-robotics-meng": {
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed summer window 15 Oct–1 Dec, written entrance exam, €60 application fee and €500/semester service fee.",
+     "source": "https://www.th-deg.de/mro-m-en"
+    }
+   ]
+  },
+  "utn-ai-robotics": {
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Page still shows the 2026 cycle (1 Mar–31 May); 2027 dates not yet published, IELTS 6.5 confirmed.",
+     "source": "https://www.utn.de/en/study/ai-robotics-en/"
+    }
+   ]
+  },
+  "whz-embedded-autonomous": {
+   "set": {
+    "dates.deadline": "2027-04-30",
+    "deadlineNote": "Winter only; non-EU via uni-assist by 30 Apr because the programme is admission-restricted.",
+    "requirements.english": "English B2 (no IELTS score published)"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Programme is admission-restricted, so the non-EU winter deadline is 30 Apr 2027, not 30 Jun.",
+     "source": "https://www.whz.de/english/study/incomings/application/international-full-time-study/your-application/"
+    }
+   ]
+  },
+  "luh-ai-mechatronics-robotics": {
+   "set": {
+    "requirements.english": "English C1 (AI-driven track)",
+    "links.program": "https://www.maschinenbau.uni-hannover.de/studium/studiengaenge/maststudiengaenge/ai-driven-mechatronics-and-robotics"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed summer window 15 Oct–30 Nov with uni-assist VPD ~8 weeks earlier, English C1, and 15 ECTS technical mechanics + 10 ECTS control prerequisites.",
+     "source": "https://www.maschinenbau.uni-hannover.de/studium/studiengaenge/maststudiengaenge/ai-driven-mechatronics-and-robotics"
+    }
+   ]
+  },
+  "kth-es": {
+   "set": {
+    "dates.results": "2027-04-01",
+    "requirements.prereqs": [
+     "≥30 ECTS maths",
+     "≥60 ECTS electronics/microelectronics/computer engineering",
+     "≥6 ECTS programming (C/C++)",
+     "≥6 ECTS computer architecture/digital design"
+    ],
+    "verify": false
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Round-1 dates confirmed (opens 16 Oct, deadline 15 Jan, documents 1 Feb, results 1 Apr 2027); entry requirements are English 6 with no control prerequisite.",
+     "source": "https://www.kth.se/en/studies/master/embedded-systems/entry-requirements-embedded-systems-1.70529"
+    }
+   ]
+  },
+  "chalmers-eesd": {
+   "set": {
+    "dates.results": "2027-04-01"
+   },
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Programme URL works again and shows the mid-Oct to mid-Jan application period; tuition and prerequisites could not be read, so still unconfirmed.",
+     "source": "https://www.chalmers.se/en/education/find-masters-programme/embedded-electronic-system-design-msc/"
+    }
+   ]
+  },
+  "lund-eee": {
+   "set": {
+    "dates.results": "2027-04-01",
+    "tuition.note": "Autumn 2027 intake: SEK 370,000 total, first payment SEK 92,500; runs 30 Aug 2027 – 3 Jun 2029"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Page now shows autumn 2027 figures: SEK 370,000 total, English 6, and VHDL/Verilog knowledge required.",
+     "source": "https://www.lunduniversity.lu.se/study/embedded-electronics-engineering-masters-programme-TAEEE"
+    }
+   ]
+  },
+  "hv-robotics-automation": {
+   "set": {
+    "dates.results": "2027-04-01"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Fee confirmed at SEK 140,000/year (280,000 total); no control or mechatronics prerequisite.",
+     "source": "https://www.hv.se/en/education/degree-programmes/master-in-robotics-and-automation-2-years-on-campus/"
+    }
+   ]
+  },
+  "umu-robotics-control": {
+   "set": {
+    "dates.results": "2027-04-01",
+    "links.program": "https://www.umu.se/en/education/master/masters-programme-in-robotics-and-control/",
+    "requirements.text": "30 ECTS maths, 15 ECTS computing science (7.5 programming), 7.5 ECTS digital electronics, and 7.5 ECTS in control OR signal processing OR numerical methods OR differential equations (signal processing is enough, so control is not strictly required).",
+    "verify": false
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Fee (SEK 304,600 total, 2025 figure) and prerequisites confirmed on the current programme page; control is optional because signal processing also qualifies.",
+     "source": "https://www.umu.se/en/education/master/masters-programme-in-robotics-and-control/"
+    }
+   ]
+  },
+  "hh-embedded-intelligent-robotics": {
+   "set": {
+    "dates.results": "2027-04-01"
+   },
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Programme page says it focuses on software rather than electronics/hardware and needs programming syllabi; fee and English level still not readable on the official page.",
+     "source": "https://www.hh.se/english/education/programmes/masters-programme-in-embedded-and-intelligent-systems---ai-iot-and-robotics.html"
+    }
+   ]
+  },
+  "kth-systems-control-robotics": {
+   "set": {
+    "dates.results": "2027-04-01"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed that control technology and differential equations are required prerequisites (conflicts with the no-control preference).",
+     "source": "https://www.kth.se/en/studies/master/systems-control-robotics/entry-requirements-for-systems-control-and-robotics-1.8734"
+    }
+   ]
+  },
+  "chalmers-systems-control-mechatronics": {
+   "set": {
+    "dates.results": "2027-04-01"
+   },
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Page shows the mid-Oct to mid-Jan application period; fee and prerequisites still not readable on the official page.",
+     "source": "https://www.chalmers.se/en/education/find-masters-programme/systems-control-and-mechatronics-msc/"
+    }
+   ]
+  },
+  "oslomet-robotics-control": {
+   "set": {
+    "tuition.note": "NOK 95,000 per year (2026/27), adjusted for inflation each year, + about NOK 1,000 semester fee; no scholarships"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed portal opens 15 Oct and non-EU deadline 1 Nov 2026; NOK 95,000/yr fee; no control or mechanics prerequisite.",
+     "source": "https://www.oslomet.no/en/study/tkd/robotics-control"
+    }
+   ]
+  },
+  "usn-it-automation": {
+   "set": {
+    "appFee": null
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed application window 1 Oct–15 Nov 2026 with no application fee; 2027/28 tuition due by end of October.",
+     "source": "https://www.usn.no/english/academics/how-to-apply/for-non-eu-eea-applicants/"
+    }
+   ]
+  },
+  "uio-robotics-intelligent-systems": {
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Could not verify: uio.no blocked automated access; the 15 Nov vs 1 Dec deadline question remains open.",
+     "source": "https://www.uio.no/english/studies/programmes/informatics-robotics-master/"
+    }
+   ]
+  },
+  "ntnu-mechatronics-automation": {
+   "set": {
+    "dates.docs": "2026-12-01",
+    "deadlineNote": "NTNU non-EU window 1 Nov – 1 Dec; all educational documents must be uploaded by 1 Dec. 2027-cycle programme page not yet updated."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "NTNU general rules confirm the 1 Dec non-EU deadline with documents due the same day; NOK 205,600/yr for 2026/27.",
+     "source": "https://www.ntnu.edu/studies/msmecaut"
+    }
+   ]
+  },
+  "ssi2": {
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Site still says admission opens and the website will be updated around 1 Oct 2026; no deadline or requirements yet.",
+     "source": "https://ssi-master.eu/"
+    }
+   ]
+  },
+  "delft-cese": {
+   "set": {
+    "links.program": "https://www.tudelft.nl/en/education/programmes/masters/cese/msc-computer-embedded-systems-engineering",
+    "dates.opens": "2026-10-15",
+    "tuition.amount": 26479,
+    "tuition.note": "2027/28 non-EU rate (2026/27 was €25,633)",
+    "appFee": {
+     "amount": 100,
+     "currency": "EUR"
+    },
+    "requirements.ielts": 7,
+    "requirements.ieltsSection": 6.5,
+    "requirements.gpaPct": 75,
+    "requirements.text": "BSc in EE/CS or related with maths, probability, computer architecture, C programming, digital systems, signals & systems, OS. GRE General Test required for international diplomas.",
+    "verify": false
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Official TU Delft pages confirm the 15 Jan 2027 deadline and show IELTS 7.0 (6.5 per section), €26,479 tuition for 2027/28, a €100 fee and a mandatory GRE.",
+     "source": "https://www.tudelft.nl/en/education/admission-and-application/msc-international-diploma/dates-deadlines"
+    }
+   ]
+  },
+  "twente-ee": {
+   "set": {
+    "tuition.amount": 22320,
+    "tuition.per": "year",
+    "tuition.note": "2027/28 non-EU rate",
+    "requirements.ieltsSection": 6,
+    "dates.deadline": "2027-04-30",
+    "requirements.text": "EE background incl. control engineering, electronics, DSP, EM fields. CGPA ≥75% (70% for IIT/NIT graduates)."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "2027/28 tuition published at €22,320/yr; IELTS 6.5 with 6.0 per section; non-EU deadline is before 1 May (30 Apr).",
+     "source": "https://www.utwente.nl/en/education/master/programmes/electrical-engineering/admission/admission-international/"
+    }
+   ]
+  },
+  "twente-rob": {
+   "set": {
+    "tuition.amount": 22320,
+    "tuition.per": "year",
+    "tuition.note": "2027/28 non-EU rate",
+    "requirements.ieltsSection": 6,
+    "dates.deadline": "2027-04-30"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "2027/28 tuition published at €22,320/yr; IELTS 6.5 with 6.0 per section; control is a prerequisite.",
+     "source": "https://www.utwente.nl/en/education/master/programmes/robotics/application-admission/international-students/"
+    }
+   ]
+  },
+  "tue-es": {
+   "set": {
+    "tuition.amount": 22400,
+    "tuition.per": "year",
+    "tuition.note": "2027/28 non-EU rate",
+    "requirements.ielts": 6.5,
+    "requirements.ieltsSection": 6,
+    "requirements.gpa": "India: CGPA ≥ 8.5/10 (75% only if no CGPA is given) — 7.67 is below this",
+    "requirements.text": "≥20 EC maths, programming, computer architecture + 3 of: data structures, SW dev, DSP, OS, digital systems, control. India: CGPA at least 8.5/10."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "The TU/e India page requires CGPA 8.5/10, which rules this out at 7.67; tuition €22,400 for 2027/28.",
+     "source": "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/programtype/master-program/program/embedded-systems/country/india"
+    }
+   ]
+  },
+  "tudelft-robotics": {
+   "set": {
+    "requirements.ieltsSection": 6.5
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed opens 15 Oct, deadline 1 Apr 2027, €26,479, IELTS 7.0 with 6.5 per section; control, mechatronics and rigid-body dynamics expected.",
+     "source": "https://www.tudelft.nl/en/education/admission-and-application/msc-international-diploma/admission-requirements"
+    }
+   ]
+  },
+  "rug-systems-control": {
+   "set": {
+    "requirements.ieltsSection": 6.5,
+    "tuition.note": "€24,900 is the 2026/27 rate; 2027/28 not yet announced"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed 15 Oct 2026 (Feb start) and 1 May 2027 (Sept start) deadlines; IELTS 6.5 in every section; basic control theory required.",
+     "source": "https://www.rug.nl/masters/systems-and-control/?lang=en"
+    }
+   ]
+  },
+  "jemaro": {
+   "set": {
+    "deadlineNote": "Centrale Nantes states no JEMARO recruitment for the 2026–2028 intake and no 2027 call is posted. The EMARO double degree (Europe-only mobility) is still recruiting.",
+    "tuition.amount": 9000,
+    "tuition.per": "year",
+    "tuition.note": "€18,000 total for partner-country students; scholarships are partial fee reductions",
+    "requirements.ielts": 6.5,
+    "requirements.prereqs": [
+     "180 ECTS in mechatronics, automatic control, EE, ME or related"
+    ]
+   },
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Official page says there is no JEMARO recruitment for 2026–28 and no 2027 call yet; fees are €18,000 total and IELTS 6.5.",
+     "source": "https://www.ec-nantes.fr/study/erasmus-mundus-joint-master-degrees/jemaro-erasmus-mundus-joint-master-degree"
+    }
+   ]
+  },
+  "grenoble-mars": {
+   "set": {
+    "deadlineNote": "2027–28 applications open mid-October 2026 (exact date and deadline not posted). Indian applicants must also complete Campus France Études en France.",
+    "links.apply": "https://applicationform.grenoble-inp.fr/FSA2/676?lang=en",
+    "requirements.gpa": "GPA ≥ 3.5/4.0"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed €5,180 + €105 CVEC and IELTS 5.5; applications open mid-October 2026 and GPA is stated as 3.5/4.0.",
+     "source": "https://ense3.grenoble-inp.fr/en/study-at-ense3/master-tsi-mobile-autonomous-and-robotic-systems-mars"
+    }
+   ]
+  },
+  "centrale-lille": {
+   "set": {
+    "deadlineNote": "No English-taught robotics or embedded M1. Closest is Master E-TECH (M2 only, electronics/IoT hardware), currently closed with no 2027 dates.",
+    "links.program": "https://centralelille.fr/en/master-etech/"
+   },
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "The Centrale Lille masters catalogue has no English M1 in robotics or embedded; E-TECH (M2) is the only relevant option and has no 2027 dates.",
+     "source": "https://centralelille.fr/en/formation/masters/"
+    }
+   ]
+  },
+  "centrale-nantes-advanced-robotics": {
+   "set": {
+    "dates.results": "2027-01-14",
+    "appFee": null,
+    "tuition.note": "€12,000/yr; €2,000 early-bird reduction for non-EU applicants in round 1 who pay within a month. Round results 14 Jan, 18 Mar, 21 May 2027."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed eCandidat opens 28 Oct 2026, M1 rounds close 15 Dec / 18 Feb / 28 Apr, €12,000/yr, IELTS 6.5, no application fee; round-1 results 14 Jan 2027.",
+     "source": "https://www.ec-nantes.fr/study/masters/master-of-science-msc-programmes-eligibility-and-applications"
+    }
+   ]
+  },
+  "paris-saclay-m1-ee": {
+   "set": {
+    "tuition.note": "€3,950 non-EU, but Paris-Saclay's fee page says non-EU students may get a partial exemption to the domestic rate (~€254) — confirm for 2027-28"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "2027 dates still not posted; the university fee page suggests a partial exemption to about €254, which needs confirming.",
+     "source": "https://www.universite-paris-saclay.fr/en/admissions/tuition-fees"
+    }
+   ]
+  },
+  "paris-saclay-m2-saas": {
+   "set": {
+    "tuition.note": "€3,950 non-EU; partial exemption to the domestic rate (~€254) possible — confirm for 2027-28"
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "2027 dates not posted; the page requires control theory, which conflicts with the no-control preference.",
+     "source": "https://www.universite-paris-saclay.fr/en/education/masters-degree/electrical-engineering/m2-smart-aerospace-and-autonomous-systems"
+    }
+   ]
+  },
+  "eit-ausir": {
+   "set": {
+    "requirements.ielts": 6.5,
+    "requirements.ieltsSection": 6,
+    "tuition.note": "€9,000/semester (€36,000 total) non-EU; EIT scholarships available. Last cycle's non-EU Period 1 ran 31 Oct – 11 Feb."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Confirmed €18,000/yr and €75 fee; 2027/28 dates not yet published (last cycle non-EU round 31 Oct – 11 Feb).",
+     "source": "https://masterschool.eitdigital.eu/admissions/fees"
+    }
+   ]
+  },
+  "em-mir": {
+   "set": {
+    "requirements.ielts": 6.5,
+    "deadlineNote": "No 2026 intake; application page lists no important dates and no 2027 call has been announced."
+   },
+   "verified": "2026-09-27",
+   "log": [
+    {
+     "date": "2026-09-27",
+     "text": "Fees of €9,000/yr and IELTS 6.5 confirmed; no 2027 call announced.",
+     "source": "https://www.master-mir.eu/participation-fees/"
+    }
+   ]
+  }
+ },
+ "add": [
+  {
+   "id": "bremen-cmm",
+   "uni": "Universität Bremen",
+   "program": "M.Sc. Control, Microsystems, Microelectronics (CMM)",
+   "country": "DE",
+   "city": "Bremen",
+   "fields": [
+    "Electronics",
+    "Embedded",
+    "Automation"
+   ],
+   "intake": "Summer 2027 (April)",
+   "dates": {
+    "opens": "2026-08-01",
+    "deadline": "2026-10-15"
+   },
+   "deadlineNote": "New students start only in the summer semester. Apply 1 Aug – 15 Oct via the MoveIn portal.",
+   "tuition": {
+    "amount": 0,
+    "currency": "EUR",
+    "per": "year",
+    "note": "No tuition; semester contribution about €425"
+   },
+   "appFee": null,
+   "requirements": {
+    "ielts": 7,
+    "prereqs": [
+     "Bachelor in EE/IT, automation or microelectronics (180 ECTS)",
+     "Control is one of the tracks, not a stated prerequisite"
+    ],
+    "text": "Bachelor in EE/IT, automation engineering, microelectronics or related; can apply with ≥140 ECTS if not finished. APS required for Indian degrees.",
+    "english": "English C1 (no IELTS score published)",
+    "gpa": "Applicant info PDF states German grade 2.0 or better — borderline for 7.67/10"
+   },
+   "portal": "MoveIn (Uni Bremen)",
+   "links": {
+    "program": "https://www.uni-bremen.de/en/faculty-1-physics-electrical-engineering/studies/degree-programs/control-microsystems-microelectronics-cmm-msc",
+    "apply": "https://movein-uni-bremen.moveonnet.eu/movein/portal/studyportal.php?_language=en"
+   },
+   "docs": [
+    "aps",
+    "dmat",
+    "transcripts",
+    "degree",
+    "ielts",
+    "cv",
+    "sop",
+    "courses",
+    "appfee",
+    "passport"
+   ],
+   "fit": "ok",
+   "priority": "high",
+   "notes": "Summer-only intake, English-taught, ECE-friendly (microelectronics, microsystems). Flags: 2.0 grade minimum is a stretch and the deadline is 15 Oct 2026.",
+   "verify": false,
+   "lastVerified": "2026-09-27",
+   "watch": [
+    "https://www.uni-bremen.de/en/faculty-1-physics-electrical-engineering/studies/degree-programs/control-microsystems-microelectronics-cmm-msc",
+    "https://www.uni-bremen.de/fileadmin/user_upload/sites/master/Science/English/CMM_E.pdf"
+   ]
+  },
+  {
+   "id": "ilmenau-rcse",
+   "uni": "Technische Universität Ilmenau",
+   "program": "M.Sc. Research in Computer & Systems Engineering",
+   "country": "DE",
+   "city": "Ilmenau",
+   "fields": [
+    "Computer",
+    "Embedded",
+    "Robotics",
+    "Automation"
+   ],
+   "intake": "Summer 2027 (April); also Winter 2027",
+   "dates": {
+    "opens": "2026-08-01",
+    "deadline": "2026-11-15"
+   },
+   "deadlineNote": "Foreign certificates: summer 2027 window 1 Aug – 15 Nov 2026; winter window about 16 Feb – 15 May.",
+   "tuition": {
+    "amount": 0,
+    "currency": "EUR",
+    "per": "year",
+    "note": "No tuition; semester fee about €270"
+   },
+   "appFee": null,
+   "requirements": {
+    "prereqs": [
+     "Bachelor in CS, technical CS, computer engineering or similar",
+     "Curriculum includes control theory (content, not a stated prerequisite)"
+    ],
+    "text": "Research-oriented programme covering complex embedded systems, control and communications with robotics/automotive applications. APS required for Indian degrees.",
+    "english": "English proof required; score not published on the official page",
+    "gpa": "No minimum stated"
+   },
+   "portal": "TU Ilmenau applicant portal",
+   "links": {
+    "program": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/master/research-in-computer-systems-engineering-msc",
+    "apply": "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/application/application-with-foreign-certificates"
+   },
+   "docs": [
+    "aps",
+    "dmat",
+    "transcripts",
+    "degree",
+    "ielts",
+    "cv",
+    "sop",
+    "courses",
+    "appfee",
+    "passport"
+   ],
+   "fit": "good",
+   "priority": "high",
+   "notes": "English-only, summer intake, no tuition; embedded + robotics + automation. Check that an ECE degree counts as a similar field and the exact English score.",
+   "verify": true,
+   "lastVerified": "2026-09-27",
+   "watch": [
+    "https://www.tu-ilmenau.de/en/study/before-the-study/range-of-courses/application/application-with-foreign-certificates",
+    "https://www.tu-ilmenau.de/en/study/in-study/course-of-studies/deadlines-and-dates"
+   ]
+  },
+  {
+   "id": "rwu-eees",
+   "uni": "RWU Hochschule Ravensburg-Weingarten",
+   "program": "M.Eng. Electrical Engineering and Embedded Systems",
+   "country": "DE",
+   "city": "Weingarten",
+   "fields": [
+    "Electronics",
+    "Embedded"
+   ],
+   "intake": "Winter 2027 (October)",
+   "dates": {
+    "opens": "2027-02-01",
+    "deadline": "2027-04-15"
+   },
+   "deadlineNote": "Winter only; international window 1 Feb – 15 Apr (2027 dates inferred from the recurring pattern).",
+   "tuition": {
+    "amount": 3000,
+    "currency": "EUR",
+    "per": "year",
+    "note": "Baden-Württemberg non-EU fee €1,500/semester + semester fee"
+   },
+   "appFee": null,
+   "requirements": {
+    "ielts": 6,
+    "prereqs": [
+     "Bachelor in EE, electronics, CS or related",
+     "210 ECTS (a 4-year B.Tech qualifies)"
+    ],
+    "text": "Bachelor in EE/electronics/CS with German grade 2.5 or better and 210 ECTS. 3 semesters, 30 places. APS required for Indian degrees.",
+    "english": "IELTS 6.0 / TOEFL iBT 70 / B2, under 2 years old",
+    "gpa": "German grade 2.5 or better"
+   },
+   "portal": "RWU portal (mycampus.rwu.de)",
+   "links": {
+    "program": "https://www.rwu.de/en/studies/study-programs/electrical-engineering-and-embedded-systems-en",
+    "apply": "https://www.rwu.de/en/international/international-degree-seeking-students/study-offer-and-application"
+   },
+   "docs": [
+    "aps",
+    "dmat",
+    "transcripts",
+    "degree",
+    "ielts",
+    "cv",
+    "sop",
+    "courses",
+    "appfee",
+    "passport"
+   ],
+   "fit": "good",
+   "priority": "medium",
+   "notes": "Direct ECE/embedded match, reachable grade cutoff, no control prerequisite. Winter intake only.",
+   "verify": true,
+   "lastVerified": "2026-09-27",
+   "watch": [
+    "https://www.rwu.de/en/studies/study-programs/electrical-engineering-and-embedded-systems-en",
+    "https://www.rwu.de/en/international/international-degree-seeking-students/study-offer-and-application"
+   ]
+  },
+  {
+   "id": "uppsala-embedded",
+   "uni": "Uppsala University",
+   "program": "M.Sc. Embedded Systems",
+   "country": "SE",
+   "city": "Uppsala",
+   "fields": [
+    "Embedded",
+    "Computer",
+    "Electronics"
+   ],
+   "intake": "Autumn 2027 (Aug)",
+   "dates": {
+    "opens": "2026-10-16",
+    "deadline": "2027-01-15",
+    "docs": "2027-02-01",
+    "results": "2027-04-01"
+   },
+   "deadlineNote": "universityadmissions.se round 1. Documents + SEK 900 fee by 1 Feb.",
+   "tuition": {
+    "amount": 300000,
+    "currency": "SEK",
+    "per": "total",
+    "note": "SEK 300,000 total; first instalment SEK 75,000"
+   },
+   "appFee": {
+    "amount": 900,
+    "currency": "SEK"
+   },
+   "requirements": {
+    "ielts": 6.5,
+    "ieltsSection": 5.5,
+    "prereqs": [
+     "20 credits mathematics",
+     "30 credits computer science incl. programming and computer architecture"
+    ],
+    "text": "Bachelor in engineering, maths or CS with 20 credits maths and 30 credits CS incl. programming and computer architecture. No control prerequisite.",
+    "english": "English 6 (IELTS 6.5, no section below 5.5)",
+    "gpa": "No minimum; merit-based selection"
+   },
+   "portal": "universityadmissions.se",
+   "links": {
+    "program": "https://www.uu.se/en/study/programme/masters-programme-embedded-systems",
+    "apply": "https://www.universityadmissions.se/"
+   },
+   "docs": [
+    "transcripts",
+    "degree",
+    "ielts",
+    "passport",
+    "cv",
+    "sop",
+    "lor1",
+    "lor2",
+    "courses",
+    "appfee"
+   ],
+   "fit": "good",
+   "priority": "high",
+   "notes": "Pure embedded-systems programme with no control or mechanical prerequisites.",
+   "verify": false,
+   "lastVerified": "2026-09-27",
+   "watch": [
+    "https://www.uu.se/en/study/programme/masters-programme-embedded-systems",
+    "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+   ]
+  },
+  {
+   "id": "liu-electronics-engineering",
+   "uni": "Linköping University",
+   "program": "M.Sc. Electronics Engineering (Embedded Digital Systems / Microelectronics)",
+   "country": "SE",
+   "city": "Linköping",
+   "fields": [
+    "Electronics",
+    "Embedded"
+   ],
+   "intake": "Autumn 2027 (Aug)",
+   "dates": {
+    "opens": "2026-10-16",
+    "deadline": "2027-01-15",
+    "docs": "2027-02-01",
+    "results": "2027-04-01"
+   },
+   "deadlineNote": "universityadmissions.se round 1. Documents + SEK 900 fee by 1 Feb.",
+   "tuition": {
+    "amount": 332000,
+    "currency": "SEK",
+    "per": "total",
+    "note": "SEK 332,000 total for non-EU"
+   },
+   "appFee": {
+    "amount": 900,
+    "currency": "SEK"
+   },
+   "requirements": {
+    "ielts": 6.5,
+    "ieltsSection": 5.5,
+    "prereqs": [
+     "Bachelor with major in EE",
+     "20 ECTS maths incl. linear algebra",
+     "5 ECTS signals & systems / transforms / circuit theory",
+     "Basic programming course"
+    ],
+    "text": "Bachelor in EE; choose Embedded digital systems (SoC) or Microelectronics (mixed-signal/RF IC) specialisation. No control prerequisite.",
+    "english": "English 6 (IELTS 6.5, no section below 5.5)",
+    "gpa": "No minimum; merit-based selection"
+   },
+   "portal": "universityadmissions.se",
+   "links": {
+    "program": "https://liu.se/en/education/program/6mele",
+    "apply": "https://www.universityadmissions.se/"
+   },
+   "docs": [
+    "transcripts",
+    "degree",
+    "ielts",
+    "passport",
+    "cv",
+    "sop",
+    "lor1",
+    "lor2",
+    "courses",
+    "appfee"
+   ],
+   "fit": "good",
+   "priority": "high",
+   "notes": "Strong ECE match in IC/SoC design with an embedded digital systems track.",
+   "verify": false,
+   "lastVerified": "2026-09-27",
+   "watch": [
+    "https://liu.se/en/education/program/6mele",
+    "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+   ]
+  }
+ ]
 }
