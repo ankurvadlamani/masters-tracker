@@ -14,6 +14,11 @@
    "date": "2026-10-07",
    "summary": "Re-checked all 51 programmes; 44 confirmed on official pages. Changes: Grenoble MARS 2027-28 window confirmed 15 Oct 2026 – 15 Apr 2027; TU Dortmund summer window opens 15 Nov; TUM RCI requires German as well as English; THD says Indian applicants need dMAT proof (15 Sep deadline passed); FAU and TUHH confirmed; SSI2 English/academic requirements published; prerequisites recorded for many programmes. Added h_da EE&IT International, Twente Embedded Systems, TU Delft Electrical Engineering, THD EE&IT and Jönköping AI Engineering. Still unconfirmed: Hannover (site unreachable), Chalmers/Halmstad fees, UiO fee and deadline, MDU/Miun 2027 intakes (Miun may not run), UTN/RWU 2027 dates, SSI2/EIT/Paris-Saclay 2027 dates.",
    "checked": 51
+  },
+  {
+   "date": "2026-10-11",
+   "summary": "Re-checked 19 programmes (priority: monitor flags and near deadlines). Changes: Chalmers fee confirmed SEK 380,000 total from 2027/28; UiO Robotics fee drops to NOK 218,000/yr and 15 Oct–1 Dec window confirmed; Halmstad fee SEK 318,000 total; Hannover finally reachable (English C1, 15 Oct–30 Nov); EIT Digital is now 28DIGITAL (€75 fee); MDU and Miun autumn 2027 intakes confirmed; Lübeck closes 15 Oct. Added Paderborn Electrical Systems Engineering, THD AI for Smart Sensors & Actuators (mechatronics flag) and UiO Electronics, Informatics & Technology. Still unconfirmed: 28DIGITAL/SSI2/Paris-Saclay/JEMARO/MIR 2027 dates, MDU/Miun fees, TUM RCI German requirement, UiO Electronics teaching language.",
+   "checked": 19
   }
  ],
  "changes": {
@@ -87,7 +92,7 @@
     ],
     "tuition.note": "TUM general page: master's fees usually €4,000 or €6,000 per semester (RCI amount not shown); new enrollees from WS 2027/28 pay €4,600 or €6,800 per semester."
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -103,6 +108,11 @@
      "date": "2026-10-07",
      "text": "The 1 Oct – 30 Nov window and GRE Q164/AW4.0 (GATE accepted for India) are confirmed, but TUM lists German as well as English proficiency as required, which is likely a blocker; the RCI fee tier is still unpublished.",
      "source": "https://www.cit.tum.de/en/cit/studies/degree-programs/master-robotics-cognition-intelligence/"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Programme page confirms the summer window 1 Oct – 30 Nov and still lists German as well as English proficiency.",
+     "source": "https://www.tum.de/en/studies/degree-programs/detail/robotics-cognition-intelligence-master-of-science-msc"
     }
    ]
   },
@@ -120,7 +130,7 @@
     "deadlineNote": "Summer semester deadline 30 Nov; extended deadline for additional documents is 15 Jan (page still shows 15 Jan 2026).",
     "verify": false
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -136,6 +146,11 @@
      "date": "2026-10-07",
      "text": "The 30 Nov deadline and IELTS 6.5 are confirmed; the programme page requires the GRE (Q157, AW3) for non-EU applicants unless the grade is better than German 1.8 and does not mention dMAT as an alternative.",
      "source": "https://www.uni-paderborn.de/en/studyoffer/course_of_study/computer-engineering-master"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "International office page still lists 30 Nov (summer) and 31 May (winter) via uni-assist.",
+     "source": "https://www.uni-paderborn.de/en/studies/international-office/degree-students/application-for-admission-terms/application-deadlines"
     }
    ]
   },
@@ -205,7 +220,7 @@
     "requirements.english": "English B2 (no IELTS score published)",
     "requirements.text": "≥32 ECTS maths and ≥28 ECTS technology/informatics. APS required for Indian applicants; apply via uni-assist."
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -220,6 +235,11 @@
     {
      "date": "2026-10-07",
      "text": "The summer-semester uni-assist window of 1 Sep – 15 Oct is confirmed; it closes on 15 Oct 2026.",
+     "source": "https://www.uni-luebeck.de/en/university-education/international/international-students/degree-programmes/application-deadlines.html"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Official deadlines page confirms the summer-semester window 1 Sep – 15 Oct via uni-assist for non-EU applicants; the deadline is this week.",
      "source": "https://www.uni-luebeck.de/en/university-education/international/international-students/degree-programmes/application-deadlines.html"
     }
    ]
@@ -261,9 +281,10 @@
      "Bachelor's GPA 2.5 or better (German scale)",
      "At least 90 ECTS (~50%) computer science content",
      "English B2+ (CEFR) certificate"
-    ]
+    ],
+    "dates.results": "2027-03-31"
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -278,6 +299,11 @@
     {
      "date": "2026-10-07",
      "text": "The 15 Nov – 15 Feb winter window and the 90 ECTS CS rule are confirmed; the page also asks for a German-grade 2.5 minimum and English B2+.",
+     "source": "https://www.h-brs.de/en/inf/admission-application-master-autonomous-systems"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Admission page confirms the winter window 15 Nov – 15 Feb via uni-assist for visa-requiring applicants, results from 31 March, APS required and dMAT not considered.",
      "source": "https://www.h-brs.de/en/inf/admission-application-master-autonomous-systems"
     }
    ]
@@ -307,7 +333,7 @@
    ]
   },
   "thd-robotics-meng": {
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -322,6 +348,11 @@
     {
      "date": "2026-10-07",
      "text": "The 15 Oct – 1 Dec summer window and entrance exam are confirmed; the THD apply page says Indian master's applicants need dMAT proof from SS2027 with a passed 15 Sep deadline, so summer 2027 may be at risk.",
+     "source": "https://www.th-deg.de/en/apply"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "THD apply page unchanged: Robotics summer window 15 Oct – 1 Dec, €60 application fee, dMAT proof required for Indian applicants from SS2027.",
      "source": "https://www.th-deg.de/en/apply"
     }
    ],
@@ -397,10 +428,12 @@
   },
   "luh-ai-mechatronics-robotics": {
    "set": {
-    "requirements.english": "English C1 (AI-driven track)",
-    "links.program": "https://www.maschinenbau.uni-hannover.de/studium/studiengaenge/maststudiengaenge/ai-driven-mechatronics-and-robotics"
+    "requirements.english": "English C1 (CEFR); no German required",
+    "links.program": "https://www.maschinenbau.uni-hannover.de/studium/studiengaenge/maststudiengaenge/ai-driven-mechatronics-and-robotics",
+    "deadlineNote": "Non-EU via uni-assist VPD: summer 15 Oct – 30 Nov; winter 15 Apr – 31 May. Apply via the Mechatronics and Robotics master's and pick the AI-driven track.",
+    "verify": false
    },
-   "verified": "2026-09-27",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -415,6 +448,11 @@
     {
      "date": "2026-10-07",
      "text": "The Leibniz Universität Hannover pages timed out again, so nothing could be verified.",
+     "source": "https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/ai-driven-mechatronics-and-robotics"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Hannover page now loads: confirms English teaching, C1 English, summer window 15 Oct – 30 Nov (VPD needed) and lists mechanical/mechatronics-type bachelor's as the related fields.",
      "source": "https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/ai-driven-mechatronics-and-robotics"
     }
    ]
@@ -451,7 +489,12 @@
   },
   "chalmers-eesd": {
    "set": {
-    "dates.results": "2027-04-01"
+    "dates.results": "2027-04-01",
+    "tuition.amount": 380000,
+    "tuition.currency": "SEK",
+    "tuition.per": "total",
+    "tuition.note": "SEK 95,000 per semester (SEK 380,000 for two years) from 2027/28; was 80,000/semester in 2026/27",
+    "verify": false
    },
    "log": [
     {
@@ -468,8 +511,14 @@
      "date": "2026-10-07",
      "text": "Chalmers key dates for autumn 2027 match (16 Oct – 15 Jan, docs 1 Feb, results 1 Apr), but the tuition amount still isn't readable on the official pages.",
      "source": "https://www.chalmers.se/en/education/application-and-admission/key-dates-for-masters-studies/"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Chalmers tuition page sets 'all other master's programmes' at SEK 95,000 per semester (SEK 380,000 total) from 2027/28.",
+     "source": "https://www.chalmers.se/en/education/application-and-admission/tuition-fees/"
     }
-   ]
+   ],
+   "verified": "2026-10-11"
   },
   "lund-eee": {
    "set": {
@@ -559,7 +608,13 @@
   },
   "hh-embedded-intelligent-robotics": {
    "set": {
-    "dates.results": "2027-04-01"
+    "dates.results": "2027-04-01",
+    "tuition.amount": 318000,
+    "tuition.per": "total",
+    "tuition.note": "SEK 79,500 first semester; SEK 318,000 for the whole programme",
+    "dates.opens": "2026-10-16",
+    "intake": "Autumn 2027 (Aug 30)",
+    "verify": false
    },
    "log": [
     {
@@ -576,8 +631,14 @@
      "date": "2026-10-07",
      "text": "The Halmstad page shows no tuition or dates in readable text, so the ~SEK 151,000/yr figure is still unconfirmed.",
      "source": "https://www.hh.se/english/education/programmes/masters-programme-in-embedded-and-intelligent-systems---ai-iot-and-robotics.html"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Programme page shows the autumn 2027 occasion (start 30 Aug 2027, applications open 16 Oct, taught in English) and a non-EU fee of SEK 79,500 first semester / SEK 318,000 total.",
+     "source": "https://www.hh.se/english/education/programmes/masters-programme-in-embedded-and-intelligent-systems---ai-iot-and-robotics.html"
     }
-   ]
+   ],
+   "verified": "2026-10-11"
   },
   "kth-systems-control-robotics": {
    "set": {
@@ -604,7 +665,12 @@
   },
   "chalmers-systems-control-mechatronics": {
    "set": {
-    "dates.results": "2027-04-01"
+    "dates.results": "2027-04-01",
+    "tuition.amount": 380000,
+    "tuition.currency": "SEK",
+    "tuition.per": "total",
+    "tuition.note": "SEK 95,000 per semester (SEK 380,000 for two years) from 2027/28; was 80,000/semester in 2026/27",
+    "verify": false
    },
    "log": [
     {
@@ -621,8 +687,14 @@
      "date": "2026-10-07",
      "text": "The page only shows 'Mid-October – Mid-January' with no readable fee, so ~SEK 160,000/yr stays unconfirmed.",
      "source": "https://www.chalmers.se/en/education/find-masters-programme/systems-control-and-mechatronics-msc/"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Chalmers tuition page sets 'all other master's programmes' at SEK 95,000 per semester (SEK 380,000 total) from 2027/28.",
+     "source": "https://www.chalmers.se/en/education/application-and-admission/tuition-fees/"
     }
-   ]
+   ],
+   "verified": "2026-10-11"
   },
   "oslomet-robotics-control": {
    "set": {
@@ -634,7 +706,7 @@
      "Average grade at least C (ECTS scale)"
     ]
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -650,6 +722,11 @@
      "date": "2026-10-07",
      "text": "The portal opens 15 Oct, the non-EU deadline is 1 Nov 2026 and tuition is NOK 95,000/yr; prerequisites recorded.",
      "source": "https://www.oslomet.no/en/study/admission/admission-master"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Programme page confirms the 1 Nov non-EU deadline and the prerequisites (7.5 ECTS programming, 25 ECTS maths, C average).",
+     "source": "https://www.oslomet.no/en/study/tkd/robotics-control"
     }
    ]
   },
@@ -665,7 +742,7 @@
      "5 ECTS electro/electronics"
     ]
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -680,6 +757,11 @@
     {
      "date": "2026-10-07",
      "text": "Non-EU applications 1 Oct – 15 Nov and NOK 90,000 (2026/27) are confirmed; the slightly higher 2027/28 rate is due in late October.",
+     "source": "https://usn.no/english/academics/find-programmes/master-of-science-it-and-automation"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Programme page confirms the non-EU window 1 Oct – 15 Nov and English teaching.",
      "source": "https://usn.no/english/academics/find-programmes/master-of-science-it-and-automation"
     }
    ]
@@ -700,6 +782,11 @@
      "date": "2026-10-07",
      "text": "The programme admission page lists heavy informatics prerequisites (80 ECTS); the UiO tuition and admission-dates pages returned 403, so fee and 1 Dec deadline stay unverified.",
      "source": "https://www.uio.no/english/studies/programmes/informatics-robotics-master/programme-options/robotics/admission/"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "UiO fee table lists Robotics and Intelligent Systems at NOK 218,000/yr for 2027/28, and the application page confirms the portal opens 15 Oct 09:00 CET with a 1 Dec deadline for application and documents.",
+     "source": "https://www.uio.no/english/studies/admission/tuition/table-of-costs/"
     }
    ],
    "set": {
@@ -711,9 +798,12 @@
      "40 ECTS in at least two of: digital system design/embedded/FPGA/computer architecture; robotics/mechatronics; signal/image processing; ML/AI",
      "20 ECTS mathematics or statistics",
      "Grade average comparable to Norwegian C"
-    ]
+    ],
+    "tuition.amount": 218000,
+    "tuition.note": "NOK 218,000 per year for 2027/28 (NOK 295,000 in 2026/27)",
+    "verify": false
    },
-   "verified": "2026-10-04"
+   "verified": "2026-10-11"
   },
   "ntnu-mechatronics-automation": {
    "set": {
@@ -748,7 +838,7 @@
    ]
   },
   "ssi2": {
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -764,6 +854,11 @@
      "date": "2026-10-07",
      "text": "The 2027 call is not live yet (no deadline or fee), but the application page now confirms IELTS 6.5 (no section below 6.0), ECTS-B-level results and an electronics background.",
      "source": "https://ssi-master.eu/application/"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "As of 11 Oct the SSI2 site still says admission will open around 1 October 2026; no 2027 call, deadline or fee is live yet.",
+     "source": "https://ssi-master.eu/"
     }
    ],
    "set": {
@@ -996,9 +1091,14 @@
      "date": "2026-10-07",
      "text": "Still no JEMARO recruitment for 2026–2028 and no 2027 call.",
      "source": "https://jemaro.ec-nantes.fr/english-version/admission/deadlines"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Deadlines page unchanged: no JEMARO recruitment for 2026–2028 and no 2027 call.",
+     "source": "https://jemaro.ec-nantes.fr/english-version/admission/deadlines"
     }
    ],
-   "verified": "2026-10-07"
+   "verified": "2026-10-11"
   },
   "grenoble-mars": {
    "set": {
@@ -1131,9 +1231,16 @@
    "set": {
     "requirements.ielts": 6.5,
     "requirements.ieltsSection": 6,
-    "tuition.note": "€9,000/semester (€36,000 total) non-EU; EIT scholarships available. Last cycle's non-EU Period 1 ran 31 Oct – 11 Feb."
+    "tuition.note": "€9,000/semester (€36,000 total) non-EU; EIT scholarships available. Last cycle's non-EU Period 1 ran 31 Oct – 11 Feb.",
+    "links.program": "https://masterschool.28digital.eu/autonomous-systems-and-intelligent-robots",
+    "links.apply": "https://masterschool.28digital.eu/admissions",
+    "appFee": {
+     "amount": 75,
+     "currency": "EUR"
+    },
+    "portal": "28DIGITAL Master School online application"
    },
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-09-27",
@@ -1149,6 +1256,11 @@
      "date": "2026-10-07",
      "text": "Admissions page still shows the previous cycle; no 2027-28 dates yet.",
      "source": "https://masterschool.eitdigital.eu/admissions"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "EIT Digital Master School now redirects to 28DIGITAL Master School; fees page confirms €9,000/semester non-EU and a €75 application fee, but 2027/28 rounds are still not published.",
+     "source": "https://masterschool.28digital.eu/admissions/fees"
     }
    ]
   },
@@ -1178,7 +1290,7 @@
   },
   "bremen-cmm": {
    "set": {},
-   "verified": "2026-10-07",
+   "verified": "2026-10-11",
    "log": [
     {
      "date": "2026-10-04",
@@ -1188,6 +1300,11 @@
     {
      "date": "2026-10-07",
      "text": "Summer-only intake, 15 Oct deadline and English C1 (≈IELTS 7) are confirmed; no change.",
+     "source": "https://www.uni-bremen.de/en/faculty-1-physics-electrical-engineering/studies/degree-programs/control-microsystems-microelectronics-cmm-msc"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Programme page still lists a 15 October application deadline, a summer-semester-only start and English C1.",
      "source": "https://www.uni-bremen.de/en/faculty-1-physics-electrical-engineering/studies/degree-programs/control-microsystems-microelectronics-cmm-msc"
     }
    ]
@@ -1316,14 +1433,23 @@
    "verified": "2026-10-07"
   },
   "mdu-intelligent-embedded-systems": {
-   "set": {},
+   "set": {
+    "intake": "Autumn 2027 (Aug 30)",
+    "deadlineNote": "universityadmissions.se round 1 (application code MDU-40010); autumn 2027 occasion now listed."
+   },
    "log": [
     {
      "date": "2026-10-07",
      "text": "The MDU page still lists only the autumn 2026 start, so a 2027 intake is not yet confirmed.",
      "source": "https://www.mdu.se/en/malardalen-university/education/international/programme/masters-programme-in-intelligent-embedded-systems"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "MDU page now lists the autumn 2027 occasion (start 30 Aug 2027, English, code MDU-40010); the tuition fee is still not shown.",
+     "source": "https://www.mdu.se/en/malardalen-university/education/international/programme/masters-programme-in-intelligent-embedded-systems"
     }
-   ]
+   ],
+   "verified": "2026-10-11"
   },
   "miun-electrical-engineering": {
    "set": {
@@ -1331,13 +1457,31 @@
      "Bachelor's (180 credits) in Electrical Engineering/Electronics, Computer Engineering, Physics or Mathematics",
      "At least 22.5 ECTS Mathematics/Applied Mathematics",
      "At least 15 ECTS Electrical Engineering"
-    ]
+    ],
+    "deadlineNote": "universityadmissions.se round 1; autumn 2027 occasion confirmed (code MIU-D2M71, 15 places), applications open 16 Oct."
    },
    "log": [
     {
      "date": "2026-10-07",
      "text": "The Miun page is out of date (shows autumn 2024) and the programme list shows nothing after spring 2025, so a 2027 intake is doubtful; only entry requirements were confirmed.",
      "source": "https://www.miun.se/en/education/programmes/masters-programme-in-electrical-engineering-120-credits/"
+    },
+    {
+     "date": "2026-10-11",
+     "text": "Miun page now lists an autumn 2027 occasion in Sundsvall (English, 15 places, applications open 16 Oct); tuition still not shown.",
+     "source": "https://www.miun.se/en/education/programmes/masters-programme-in-electrical-engineering-120-credits/"
+    }
+   ],
+   "verified": "2026-10-11"
+  },
+  "thd-eeit-msc": {
+   "set": {},
+   "verified": "2026-10-11",
+   "log": [
+    {
+     "date": "2026-10-11",
+     "text": "THD apply page confirms the EE&IT summer window 15 Oct – 1 Dec and the €60 application fee.",
+     "source": "https://www.th-deg.de/en/apply"
     }
    ]
   }
@@ -2294,6 +2438,187 @@
    "lastVerified": "2026-10-07",
    "watch": [
     "https://ju.se/en/study-at-ju/our-programmes/master-programmes/ai-engineering-master-autumn-2027-mu126.html"
+   ]
+  },
+  {
+   "id": "paderborn-ese",
+   "uni": "Paderborn University",
+   "program": "M.Sc. Electrical Systems Engineering",
+   "country": "DE",
+   "city": "Paderborn",
+   "fields": [
+    "Electronics"
+   ],
+   "intake": "Summer 2027 (April); also Winter 2027",
+   "dates": {
+    "deadline": "2026-11-30"
+   },
+   "deadlineNote": "Non-EU via uni-assist: summer semester deadline 30 Nov 2026 (winter: 31 May).",
+   "tuition": {
+    "amount": 0,
+    "currency": "EUR",
+    "per": "year",
+    "note": "No tuition; semester fee only"
+   },
+   "appFee": null,
+   "requirements": {
+    "ielts": 6,
+    "prereqs": [
+     "Higher Mathematics 24 CP",
+     "Electromagnetic Field Theory 5 CP",
+     "Signal Theory 4 CP",
+     "Systems Theory 4 CP",
+     "GRE General (Q≥157, AW≥4.0) for non-EU applicants unless the final grade is very good"
+    ],
+    "text": "Bachelor in EE or related with the listed credits; open admission (no NC), examinations board checks prerequisites. Choose a track when applying: Signal & Information Processing or Electronics & Devices (IC design). Taught fully in English, no German needed.",
+    "english": "IELTS 6.0 / TOEFL iBT 87 (IELTS 7.5 ✔)",
+    "gpa": "No minimum (open admission)"
+   },
+   "portal": "uni-assist",
+   "links": {
+    "program": "https://www.uni-paderborn.de/en/studyoffer/course_of_study/electrical-systems-engineering-english-taught-program-master",
+    "apply": "https://www.uni-paderborn.de/en/studies/international-office/degree-students/application-for-admission-terms/application-deadlines"
+   },
+   "docs": [
+    "aps",
+    "dmat",
+    "transcripts",
+    "degree",
+    "ielts",
+    "cv",
+    "sop",
+    "courses",
+    "appfee",
+    "passport"
+   ],
+   "fit": "good",
+   "priority": "medium",
+   "notes": "Summer intake, no tuition, electronics/IC-design track suits ECE; no mechatronics or control prerequisite (Systems Theory ≈ signals & systems). GRE is the main extra hurdle. Separate from tracked Paderborn Computer Engineering.",
+   "verify": false,
+   "lastVerified": "2026-10-11",
+   "watch": [
+    "https://www.uni-paderborn.de/en/studyoffer/course_of_study/electrical-systems-engineering-english-taught-program-master",
+    "https://www.uni-paderborn.de/en/studies/international-office/degree-students/application-for-admission-terms/application-deadlines"
+   ]
+  },
+  {
+   "id": "thd-ai-smart-sensors-actuators",
+   "uni": "Deggendorf Institute of Technology (Campus Cham)",
+   "program": "M.Eng. Artificial Intelligence for Smart Sensors and Actuators",
+   "country": "DE",
+   "city": "Cham",
+   "fields": [
+    "Embedded",
+    "AI",
+    "Electronics"
+   ],
+   "intake": "Summer 2027 (March); also Winter 2027",
+   "dates": {
+    "opens": "2026-10-15",
+    "deadline": "2026-12-01"
+   },
+   "deadlineNote": "Summer window 15 Oct – 1 Dec via Primuss (winter 15 Apr – 15 Jun); written entrance exam (online or in Cham) follows.",
+   "tuition": {
+    "amount": 1000,
+    "currency": "EUR",
+    "per": "year",
+    "note": "No tuition; €500 service fee per semester for non-EU + student union fee"
+   },
+   "appFee": {
+    "amount": 60,
+    "currency": "EUR"
+   },
+   "requirements": {
+    "prereqs": [
+     "Bachelor ≥210 ECTS in mechatronics or a closely related engineering field (assessed individually)",
+     "Entrance exam: maths, physics, EE/electronics, systems theory, control engineering, computer science",
+     "dMAT proof for Indian applicants from SS2027 (THD apply page)"
+    ],
+    "text": "Engineering bachelor (≥210 ECTS) in mechatronics or related, plus an entrance exam; GATE/GRE optional for non-Lisbon-convention degrees. Focus: embedded AI/ML, smart sensors (MEMS), edge devices, networking.",
+    "english": "English proof required (IELTS 7.5 ✔); the page also mentions German proof for non-native speakers — confirm with THD",
+    "gpa": "No minimum stated"
+   },
+   "portal": "THD Primuss",
+   "links": {
+    "program": "https://www.th-deg.de/ki-m-en",
+    "apply": "https://www.th-deg.de/en/apply"
+   },
+   "docs": [
+    "aps",
+    "dmat",
+    "transcripts",
+    "degree",
+    "ielts",
+    "cv",
+    "sop",
+    "courses",
+    "appfee",
+    "passport"
+   ],
+   "fit": "good",
+   "priority": "medium",
+   "notes": "FLAG: asks for a mechatronics-type degree and the entrance exam covers control engineering. Strong embedded/sensor fit with a summer intake and almost no fees. Check the German-proof and dMAT wording before applying.",
+   "verify": true,
+   "lastVerified": "2026-10-11",
+   "watch": [
+    "https://www.th-deg.de/ki-m-en",
+    "https://www.th-deg.de/en/apply"
+   ]
+  },
+  {
+   "id": "uio-electronics-informatics-technology",
+   "uni": "University of Oslo",
+   "program": "M.Sc. Electronics, Informatics and Technology (Microelectronics & Sensor Technology / Signal Processing & Imaging)",
+   "country": "NO",
+   "city": "Oslo",
+   "fields": [
+    "Electronics",
+    "Embedded"
+   ],
+   "intake": "Autumn 2027 (Aug)",
+   "dates": {
+    "opens": "2026-10-15",
+    "deadline": "2026-12-01"
+   },
+   "deadlineNote": "UiO non-EU portal (Søknadsweb) opens 15 Oct 09:00 CET; deadline 1 Dec incl. all documents. Max two prioritised programmes at UiO.",
+   "tuition": {
+    "amount": 218000,
+    "currency": "NOK",
+    "per": "year",
+    "note": "NOK 218,000 per year for 2027/28 (NOK 295,000 in 2026/27)"
+   },
+   "appFee": null,
+   "requirements": {
+    "prereqs": [
+     "80 ECTS specialisation incl. 30 ECTS maths/statistics (≥20 calculus & linear algebra)",
+     "50 ECTS across programming, electronics, electromagnetism/microelectronics, signal processing/circuit analysis (≥5 ECTS each)",
+     "Grade average comparable to Norwegian C"
+    ],
+    "text": "Bachelor comparable to a Norwegian bachelor with the 80-ECTS specialisation above; upload course descriptions. Apply directly to one programme option. 43 places, ranked on grades in the required subjects.",
+    "english": "English proof (UiO general requirement; IELTS 7.5 ✔)",
+    "gpa": "Norwegian C average"
+   },
+   "portal": "UiO Søknadsweb",
+   "links": {
+    "program": "https://www.uio.no/english/studies/programmes/electronics-master/",
+    "apply": "https://www.uio.no/english/studies/admission/master/pre-application/soknadsweb.html"
+   },
+   "docs": [
+    "transcripts",
+    "degree",
+    "ielts",
+    "cv",
+    "courses",
+    "passport"
+   ],
+   "fit": "good",
+   "priority": "medium",
+   "notes": "Joint Physics/Informatics programme; an ECE degree maps well onto the prerequisites (no control or mechanics needed). Counts toward UiO's two-programme limit alongside Robotics. Language of instruction isn't stated on the English pages — confirm English teaching before applying.",
+   "verify": true,
+   "lastVerified": "2026-10-11",
+   "watch": [
+    "https://www.uio.no/english/studies/programmes/electronics-master/programme-options/microelectronic/admission/",
+    "https://www.uio.no/english/studies/admission/tuition/table-of-costs/"
    ]
   }
  ]
