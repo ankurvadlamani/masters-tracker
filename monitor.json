@@ -1,9 +1,9 @@
 {
- "lastRun": "2026-10-15T07:36:28Z",
+ "lastRun": "2026-10-16T07:23:16Z",
  "pages": {
   "https://rptu.de/en/international/master/prospective-students/master-programs/master-programs-in-english": {
    "program": "rptu-esy",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "4879d6837094fc4baa7d3123e564207bb3d89258a1144628cff3cefa83831c68",
    "dates": [
@@ -18,7 +18,7 @@
   },
   "https://applymsc.eit.rptu.de/": {
    "program": "rptu-esy",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "648e6821df5b68f47885b32d59ba41c15bd8044cfcaf2fab1f73af122ed7cdb6",
    "dates": [],
@@ -27,7 +27,7 @@
   },
   "https://www.uni-saarland.de/en/study/programmes/master/embedded-systems.html": {
    "program": "saarland-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "2ab9a95d16edef2e6104c25562a7efc16a05242968105c0a4597b034c87e5d5d",
    "dates": [],
@@ -36,7 +36,7 @@
   },
   "https://saarland-informatics-campus.de/en/studium-studies/master-english/application-guide/": {
    "program": "saarland-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "f947ff28ffd8d64cfb20bba47db4be58952507752e1554036b211b915de8e808",
    "dates": [],
@@ -44,7 +44,7 @@
   },
   "https://www.tum.de/en/studies/degree-programs/detail/robotics-cognition-intelligence-master-of-science-msc": {
    "program": "tum-rci",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "e872d21139781c7008adac94915172b8aaa9afc93d2d9deb08d66f2f2564eafb",
    "dates": [],
@@ -54,7 +54,7 @@
   },
   "https://campus.tum.de/": {
    "program": "tum-rci",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "10c98977b028ea4254a7ece111759453196a8a75e666c35f8db66779cd872a00",
    "dates": [],
@@ -62,7 +62,7 @@
   },
   "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/5625/": {
    "program": "paderborn-ce",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "c7d640e01aaf96d29a7de15a88b20046007ff14d21bd800d3afd963cccb1edbf",
    "dates": [],
@@ -71,7 +71,7 @@
   },
   "https://www.uni-paderborn.de/en/studies/international-office/degree-students/application-for-admission-terms/application-deadlines": {
    "program": "paderborn-ce",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "706393038bd323334db4c9e1d22ca5f67984e797d733f064a81e4914fb8af430",
    "dates": [
@@ -81,7 +81,7 @@
   },
   "https://uni-freiburg.de/en/studies/degree-programmes/degree-programme/399/": {
    "program": "freiburg-ese",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "b66b049e71d15e1ccb17fcb807cceb0bd61ea40b0869314d43cb55c6a6c21955",
    "dates": [],
@@ -89,7 +89,7 @@
   },
   "https://www.tu-chemnitz.de/etit/studium/stugang/index.php.en?page=m_es": {
    "program": "chemnitz-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "55e31dff81a76a1c57cebf9ea60d0cb37cb3c2df499e36b11faf397249a56653",
    "dates": [],
@@ -99,55 +99,64 @@
   },
   "https://www.tu-chemnitz.de/studierendenservice/studserv/bewerbung/bew_bamala.php.en": {
    "program": "chemnitz-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
-   "hash": "c73dc1fae2b6d6510841d2d29adede27aca468994d7b0e486cceba1266a22097",
+   "hash": "e7b0d3e0ba758e60775513b394547b39fc0ac44e41c1b833cb758d82cb9356fb",
    "dates": [
     "nology invites all “Firstis” cordially to the Enrolment and Initiation Celebration Act on October 9, 2026 – registration possible until the day b"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-15T07:36:28Z",
+   "lastChanged": "2026-10-16T07:23:16Z",
    "newDates": []
   },
   "https://www.kth.se/en/studies/master/embedded-systems": {
    "program": "kth-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
-   "hash": "d0c2179cc327e3f3c6a91e3854e0eb6c0ceb4f27eea931b3c28e837ef83cfc72",
+   "hash": "92806357f88e81fa2fe1865c21a7b59c433ee2d40ce6d7c732b122af4af4cee5",
    "dates": [],
    "status": "ok",
-   "error": "<urlopen error [Errno 101] Network is unreachable>"
+   "error": "<urlopen error [Errno 101] Network is unreachable>",
+   "lastChanged": "2026-10-16T07:23:16Z",
+   "newDates": []
   },
   "https://www.chalmers.se/en/education/find-masters-programme/embedded-electronic-system-design-msc/": {
    "program": "chalmers-eesd",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "status": "error",
    "error": "HTTP Error 404: Not Found"
   },
   "https://www.lunduniversity.lu.se/study/embedded-electronics-engineering-masters-programme-TAEEE": {
    "program": "lund-eee",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
-   "hash": "a84f2f4c69fa73444d3196cfbeeada926fd611a4059a820bce84bd847b674586",
+   "hash": "063d24790b1cc16e485edba27d35aa0e9f14ee87490e38aeaa900dc8d7bce86d",
    "dates": [
-    "emester 2027 Will open for applications 16 October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029",
-    "ll open for applications 16 October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal",
-    "ications 16 October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Fu",
-    "October. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Full time Lan"
+    "ing Dates Autumn Semester 2027 Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029",
+    "n Semester 2027 Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal",
+    "Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Fu",
+    "January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Full time Lan",
+    "ld. Dates Autumn Semester 2027 Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-13T09:36:43Z",
-   "newDates": []
+   "lastChanged": "2026-10-16T07:23:16Z",
+   "newDates": [
+    "ing Dates Autumn Semester 2027 Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029",
+    "n Semester 2027 Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal",
+    "Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Fu",
+    "January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029 Form Normal learning Pace Full time Lan",
+    "ld. Dates Autumn Semester 2027 Apply by 15 January. Lund - Full time 100% Apply now Start 30 August 2027 30 Aug 2027 End 3 June 2029 3 Jun 2029"
+   ]
   },
   "https://www.mastersportal.com/studies/394555/computer-and-embedded-systems-engineering.html": {
    "program": "delft-cese",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "status": "error",
    "error": "HTTP Error 403: Forbidden"
   },
   "https://www.utwente.nl/en/education/master/programmes/electrical-engineering/": {
    "program": "twente-ee",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "653dbf362387d06d39df1074d41a6bc48f8a48c08faf2ba07483cc566cd056a3",
    "dates": [],
@@ -157,7 +166,7 @@
   },
   "https://www.utwente.nl/en/education/master/programmes/robotics/": {
    "program": "twente-rob",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "c40ecb1f3f74ae2d89c5052fc5e1ceb9c043657d3ecc2dc6508aa2a7f743c44d",
    "dates": [],
@@ -165,7 +174,7 @@
   },
   "https://www.tue.nl/en/education/graduate-school/master-embedded-systems": {
    "program": "tue-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "0b88be332e69f12cb8b5033ba7911f3bf20c4d8f689e9e1fbbd1606284ebacf7",
    "dates": [],
@@ -175,7 +184,7 @@
   },
   "https://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/programtype/master-program/program/embedded-systems/country/india": {
    "program": "tue-es",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "616ee7bcd3024ecb44a9d8dd93c206a45d9a6ee5156d9b1a85fac804832a397e",
    "dates": [
@@ -187,7 +196,7 @@
   },
   "https://jemaro.ec-nantes.fr/": {
    "program": "jemaro",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "1ff92554c3148210b0ca5119388420a179ebbc4b236f42b811a2b80fcb8b300a",
    "dates": [
@@ -198,21 +207,21 @@
   },
   "https://master-jemaro.ec-nantes.fr": {
    "program": "jemaro",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
-   "hash": "13fdcd1f24be28bccd725e809cb5360198ea09c32b2461fb68fb804fdb0fcb67",
+   "hash": "5f1ba323a143beedeb3b0959bb4371143413506ecfcc61e4b046bb7c23150797",
    "dates": [
-    "e=\"aaa\" disabled=\"disabled\"> The registration process is closed. Current CET date & time: 15/10/2026 09:36 (C) JEMARO 2023. Contact us"
+    "e=\"aaa\" disabled=\"disabled\"> The registration process is closed. Current CET date & time: 16/10/2026 09:23 (C) JEMARO 2023. Contact us"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-15T07:36:28Z",
+   "lastChanged": "2026-10-16T07:23:16Z",
    "newDates": [
-    "e=\"aaa\" disabled=\"disabled\"> The registration process is closed. Current CET date & time: 15/10/2026 09:36 (C) JEMARO 2023. Contact us"
+    "e=\"aaa\" disabled=\"disabled\"> The registration process is closed. Current CET date & time: 16/10/2026 09:23 (C) JEMARO 2023. Contact us"
    ]
   },
   "https://ense3.grenoble-inp.fr/en/study-at-ense3/master-tsi-mobile-autonomous-and-robotic-systems-mars": {
    "program": "grenoble-mars",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "fcb94728d9151019e414df4295da72db56449067c680b148982cfee237ff7315",
    "dates": [
@@ -225,13 +234,13 @@
   },
   "https://applicationform.grenoble-inp.fr": {
    "program": "grenoble-mars",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "status": "error",
    "error": "HTTP Error 403: Forbidden"
   },
   "https://centralelille.fr/": {
    "program": "centrale-lille",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "c60bd21731322409b6541027380555ab4c00a9394233552962a817704df2f495",
    "dates": [],
@@ -241,7 +250,7 @@
   },
   "https://ssi-master.eu/": {
    "program": "ssi2",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-26T05:46:50Z",
    "hash": "4c49078d537e49c14458560d40e5c85deb4a4bfc1fa33df71d6fc8fd4334f569",
    "dates": [
@@ -251,7 +260,7 @@
   },
   "https://www.uni-luebeck.de/en/university-education/international/international-students/degree-programmes/application-deadlines.html": {
    "program": "luebeck-ras",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "41ad51a01af1b19215b75a3c3a6443c34e78e707d2fd69f9edb94310d2cba779",
    "dates": [],
@@ -259,7 +268,7 @@
   },
   "https://www2.uni-luebeck.de/en/study-program/technology/robotics-and-autonomous-systems/masters-degree-program-robotics-and-autonomous-systems/": {
    "program": "luebeck-ras",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "a60753490f4482ff2ef8e2b1b208efbe106c120b3597b198c849d6c007420436",
    "dates": [],
@@ -267,7 +276,7 @@
   },
   "https://etit.tu-dortmund.de/en/studies-and-teaching/degree-programs/master-ar/information-application-beginning-of-the-study-program-1/": {
    "program": "tudo-automation-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "73ddd365cad5b1145232fcbcd11c9d877bd0c3887a8608419c1fc7fb5f24a58b",
    "dates": [],
@@ -275,7 +284,7 @@
   },
   "https://etit.tu-dortmund.de/en/studies-and-teaching/degree-programs/master-ar-1/": {
    "program": "tudo-automation-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "1055cd57e2b55552113cb9fb8879caf19f94fa465d66d8bee034fe9da9edb9e0",
    "dates": [],
@@ -285,39 +294,33 @@
   },
   "https://www.h-brs.de/en/inf/admission-application-master-autonomous-systems": {
    "program": "hbrs-autonomous-systems",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "10457aa4a02210ad0063f2a70bdbb37a3ab4fa0d6935ad6b9f1dae9ac2b56790",
+   "hash": "8433857fb87a0e9dfb87ebfc04e0d36e57e26723e06d89169b645f7ca260e957",
    "dates": [
     "t with a bachelor's degree from abroad who do not yet have a visa for Germany : 15 May to 15 August 2026 for the summer semester 2027 exclusivel",
     "eady have a visa for Germany (with a bachelor's degree from Germany or abroad): 15 May to 15 December 2026 for the summer semester 2027 via the ap"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-13T09:36:43Z",
-   "newDates": [
-    "t with a bachelor's degree from abroad who do not yet have a visa for Germany : 15 May to 15 August 2026 for the summer semester 2027 exclusivel",
-    "eady have a visa for Germany (with a bachelor's degree from Germany or abroad): 15 May to 15 December 2026 for the summer semester 2027 via the ap"
-   ]
+   "lastChanged": "2026-10-16T07:23:16Z",
+   "newDates": []
   },
   "https://www.h-brs.de/en/inf/study/master/autonomous-systems": {
    "program": "hbrs-autonomous-systems",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "685527c8f0e5677729ef20165938eb9cc1630e014161bf3c7a3b7f74d31722e9",
+   "hash": "feeebc9b5fa3c60ebd7153170495a3b664a7d1060c4452eb40082e8774c5439c",
    "dates": [
     "ication for the summer semester 2027: For applicants with a visa requirement: - 15 May to 15 August 2026 for the summer semester 2027 exclusivel",
     "or Germans, applicants without a visa requirement or who already have a visa: - 15 May to 15 December 2026 for the summer semester 2027 via the ap"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-13T09:36:43Z",
-   "newDates": [
-    "ication for the summer semester 2027: For applicants with a visa requirement: - 15 May to 15 August 2026 for the summer semester 2027 exclusivel",
-    "or Germans, applicants without a visa requirement or who already have a visa: - 15 May to 15 December 2026 for the summer semester 2027 via the ap"
-   ]
+   "lastChanged": "2026-10-16T07:23:16Z",
+   "newDates": []
   },
   "https://www.hof-university.com/studying-at-hof-university/our-degree-programs/artificial-intelligence-and-robotics-msc.html": {
    "program": "hof-ai-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "bda425e7e27868a8b65325eccebdaf30a7980b5d81b64be060ce5f8981f5f5ff",
    "dates": [],
@@ -327,7 +330,7 @@
   },
   "https://www.hof-university.com/studying-at-hof-university/application-and-admission.html": {
    "program": "hof-ai-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "52f511be305e40d500358e6ab052a5fc97880e22e6a0633b5396117e7092ab75",
    "dates": [],
@@ -337,7 +340,7 @@
   },
   "https://www.th-deg.de/mro-m-en": {
    "program": "thd-robotics-meng",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "fc5814d7d95cdf644417f069d31c4f714b5f6808c920217ab7c2e84b23bd2b7f",
    "dates": [],
@@ -347,7 +350,7 @@
   },
   "https://www.th-deg.de/en/apply": {
    "program": "thd-robotics-meng",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "6a62b43c7e027f5cd96bcd46de23b5e4bfb9e88a926bdee3fc39739a6821f449",
    "dates": [
@@ -359,7 +362,7 @@
   },
   "https://www.utn.de/en/study/ai-robotics-en/": {
    "program": "utn-ai-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "b49be3d0928ec68e32c35a4f984d4a350165f20d85d42af9290522a347172b4c",
    "dates": [
@@ -375,7 +378,7 @@
   },
   "https://www.utn.de/en/study/application-to-study/": {
    "program": "utn-ai-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "2a06bf7cd4d24f9bed5803f44a094773df85eb4cdb708493d2ea54a04579136a",
    "dates": [],
@@ -385,7 +388,7 @@
   },
   "https://www.whz.de/english/study/incomings/courses-of-study/embedded-and-autonomous-systems-master/": {
    "program": "whz-embedded-autonomous",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "39a77a1adb94c8fdff7c8d1683bcc843818c96271ef32a51165a2cf46e3d1ab1",
    "dates": [],
@@ -395,7 +398,7 @@
   },
   "https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/ai-driven-mechatronics-and-robotics": {
    "program": "luh-ai-mechatronics-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "8fb02813a35cf9bc386f4bca9c94bcb68311738996662229a3ae60a45069a0ff",
    "dates": [],
@@ -405,17 +408,17 @@
   },
   "https://www.hv.se/en/education/degree-programmes/master-in-robotics-and-automation-2-years-on-campus/": {
    "program": "hv-robotics-automation",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "dbbfaba87b8ebe8cc320e445ac8d8e16812d65080433c8f7a47f7da9f3999036",
+   "hash": "9e0aebc8bacc9e05965dfb149507b8a8ec8e44ba466662b7f1e192f70d8b19dd",
    "dates": [],
    "status": "ok",
-   "lastChanged": "2026-10-15T07:36:28Z",
+   "lastChanged": "2026-10-16T07:23:16Z",
    "newDates": []
   },
   "https://www.umu.se/en/education/programmes/masters-programme-in-robotics-and-control/": {
    "program": "umu-robotics-control",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "2f64c1b7fac11945fd3010f60dd6d5b82638c49eeba3296aa8020bd0b296b1bc",
    "dates": [],
@@ -423,7 +426,7 @@
   },
   "https://www.hh.se/english/education/programmes/masters-programme-in-embedded-and-intelligent-systems---ai-iot-and-robotics.html": {
    "program": "hh-embedded-intelligent-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "e27ad74753d0f4a124f39103af7a92dc647fe270016bef200ae12607344c1a94",
    "dates": [],
@@ -431,7 +434,7 @@
   },
   "https://www.kth.se/en/studies/master/systems-control-robotics/entry-requirements-for-systems-control-and-robotics-1.8734": {
    "program": "kth-systems-control-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "status": "ok",
    "error": "<urlopen error [Errno 101] Network is unreachable>",
    "firstSeen": "2026-09-28T08:50:09Z",
@@ -440,21 +443,23 @@
   },
   "https://www.chalmers.se/en/education/find-masters-programme/systems-control-and-mechatronics-msc/": {
    "program": "chalmers-systems-control-mechatronics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "status": "error",
    "error": "HTTP Error 404: Not Found"
   },
   "https://www.oslomet.no/en/study/tkd/robotics-control": {
    "program": "oslomet-robotics-control",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "6f9efea1a489cbaac1027b93f1a3f13427a003fd46a92fc9d5a2e4bb185ccc37",
+   "hash": "21f4897002c4a4679d08bd0afccd63c36c692e4684d36d463ba2c09a959c940d",
    "dates": [],
-   "status": "ok"
+   "status": "ok",
+   "lastChanged": "2026-10-16T07:23:16Z",
+   "newDates": []
   },
   "https://www.oslomet.no/en/study/admission/admission-master": {
    "program": "oslomet-robotics-control",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "74f6004091eec38e0a58f7c73e7460590c7ebcc509546636b9395440260be28f",
    "dates": [],
@@ -462,7 +467,7 @@
   },
   "https://usn.no/english/academics/find-programmes/master-of-science-it-and-automation": {
    "program": "usn-it-automation",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "28aa9d940d8d312d3c4b5b69a353e4252d4a0ea96071bd85ad5fb64e46cf60f3",
    "dates": [],
@@ -472,7 +477,7 @@
   },
   "https://www.uio.no/english/studies/programmes/informatics-robotics-master/programme-options/robotics/admission/": {
    "program": "uio-robotics-intelligent-systems",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "f3ea6b615d7819ee66587ec6673d1e7d9477568c38c1276a66dcf67c927f5a8a",
    "dates": [],
@@ -480,62 +485,62 @@
   },
   "https://www.ntnu.edu/studies/msmecaut/admission": {
    "program": "ntnu-mechatronics-automation",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "ede59822388630bfe2e30011c76512c94957e8bdb6e8af3556f0e6c546734f89",
    "dates": [],
-   "status": "error",
+   "status": "ok",
    "lastChanged": "2026-10-13T09:36:43Z",
    "newDates": [],
    "error": "The read operation timed out"
   },
   "https://www.ec-nantes.fr/study/masters/advanced-robotics": {
    "program": "centrale-nantes-advanced-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "051f9cfaf0f33fdd16f2b632faa178c39136d42efbf4d187814288c30d1efb3d",
+   "hash": "3dbddb79d878e8f607c9bdadd4d70a5aca4caa3cb57f3f98283b7ea0ca244c3d",
    "dates": [
-    "4d-9911-4360-ab09-f735aba90fed @ec-nantes.fr) Applications for the 2027-28 intake open on 28 October 2026 About the programme The main objective",
+    "81-6857-4817-bf8f-22a7ac2b18d6 @ec-nantes.fr) Applications for the 2027-28 intake open on 28 October 2026 About the programme The main objective",
     "and the support I’ve received from its staff ...\" Published on March 25, 2017 Updated on October 8, 2026 Share : Facebook X Linkedin Admissions"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-15T07:36:28Z",
+   "lastChanged": "2026-10-16T07:23:16Z",
    "newDates": [
-    "4d-9911-4360-ab09-f735aba90fed @ec-nantes.fr) Applications for the 2027-28 intake open on 28 October 2026 About the programme The main objective"
+    "81-6857-4817-bf8f-22a7ac2b18d6 @ec-nantes.fr) Applications for the 2027-28 intake open on 28 October 2026 About the programme The main objective"
    ]
   },
   "https://www.ec-nantes.fr/study/masters/master-of-science-msc-programmes-eligibility-and-applications": {
    "program": "centrale-nantes-advanced-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "42e8d5c0327d9904812af25c8cfc6bba01b522a10416b45f2eb758555621906b",
+   "hash": "c8dbfcd2307c0defb179ae14f89f8dd4fcaa4bfe032b11109ebc1bca4bdd65de",
    "dates": [
     "g, Control and Robotics, Civil Engineering: Applications for the 2027-28 intake open from 28 October 2026 Apply online on the eCandidat platform",
     "Apply online Apply on the eCandidat platform Applications for the 2027-28 intake open on 28 October 2026 Watch the video on how to apply Downloa"
    ],
    "status": "ok",
-   "lastChanged": "2026-10-15T07:36:28Z",
+   "lastChanged": "2026-10-16T07:23:16Z",
    "newDates": []
   },
   "https://www.universite-paris-saclay.fr/en/education/masters-degree/electrical-engineering/m1-international-track-electrical-engineering": {
    "program": "paris-saclay-m1-ee",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
-   "hash": "4ab26cf149b423a224a5c9a0a29f490c48482c230cc26eaea95053b3dc5de086",
+   "hash": "75220c887d63b8389eda3f2c51666cf518ad510ca43b8f9dc98686a741b74421",
    "dates": [
     "interdisciplinary projects and innovation. Application Period(s) Inception Platform From 03/02/2026 to 30/06/2026 From 15/07/2026 to 15/08/",
     "nary projects and innovation. Application Period(s) Inception Platform From 03/02/2026 to 30/06/2026 From 15/07/2026 to 15/08/2026 Supportin",
     "d innovation. Application Period(s) Inception Platform From 03/02/2026 to 30/06/2026 From 15/07/2026 to 15/08/2026 Supporting documents Comp",
     "Application Period(s) Inception Platform From 03/02/2026 to 30/06/2026 From 15/07/2026 to 15/08/2026 Supporting documents Compulsory support"
    ],
-   "status": "error",
-   "lastChanged": "2026-10-13T09:36:43Z",
+   "status": "ok",
+   "lastChanged": "2026-10-16T07:23:16Z",
    "newDates": [],
    "error": "HTTP Error 503: Service Unavailable"
   },
   "https://www.universite-paris-saclay.fr/en/education/masters-degree/electrical-engineering/m2-smart-aerospace-and-autonomous-systems": {
    "program": "paris-saclay-m2-saas",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "397581ec07d75168eb2f5ec7e46bc71ad3a08db429e8b69458bf7e77ffe66bae",
    "dates": [
@@ -544,14 +549,14 @@
     "in English). Application Period(s) Inception Platform From 02/02/2026 to 05/07/2026 From 15/08/2026 to 29/08/2026 Supporting documents Comp",
     "Application Period(s) Inception Platform From 02/02/2026 to 05/07/2026 From 15/08/2026 to 29/08/2026 Supporting documents Compulsory support"
    ],
-   "status": "error",
+   "status": "ok",
    "lastChanged": "2026-10-13T09:36:43Z",
    "newDates": [],
    "error": "HTTP Error 503: Service Unavailable"
   },
   "https://www.tudelft.nl/en/education/programmes/masters/robotics/msc-robotics/admission-and-application": {
    "program": "tudelft-robotics",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "f13a0b7042cbbdc13605cf5e7c2657ef55b161bdcd87ee29b41c75e3c3ae90f5",
    "dates": [],
@@ -559,7 +564,7 @@
   },
   "https://www.rug.nl/masters/systems-and-control/?lang=en": {
    "program": "rug-systems-control",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "dbb5416ab4cae7f33fa2fd628bfc824d6b62dac9af108239085e7295fc57ad6d",
    "dates": [
@@ -580,7 +585,7 @@
   },
   "https://masterschool.eitdigital.eu/autonomous-systems-and-intelligent-robots": {
    "program": "eit-ausir",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "64c3e7328d2250134a1016983e43a3877443d0336a49ba22e58a681e685319ba",
    "dates": [
@@ -594,7 +599,7 @@
   },
   "https://masterschool.eitdigital.eu/admissions": {
    "program": "eit-ausir",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "a0228b4d2b846eea99aa7903ad86d0a53e18d4044cf52aa3f8c3f41582a356e7",
    "dates": [
@@ -622,7 +627,7 @@
   },
   "https://www.master-mir.eu/": {
    "program": "em-mir",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "d324b6a053802d325aea58b75e469a0e9ef044b25506691f5cb392f57f1ef209",
    "dates": [
@@ -632,11 +637,11 @@
   },
   "https://www.ntnu.edu/studies/msmir": {
    "program": "em-mir",
-   "lastChecked": "2026-10-15T07:36:28Z",
+   "lastChecked": "2026-10-16T07:23:16Z",
    "firstSeen": "2026-09-27T08:24:38Z",
    "hash": "09a2eb76f2e0152b7b23f8a6f47d82f80e0be1744d92bb674cfb82b1cf4ea564",
    "dates": [],
-   "status": "error",
+   "status": "ok",
    "error": "The read operation timed out"
   }
  }
